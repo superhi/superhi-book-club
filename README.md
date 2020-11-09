@@ -23,16 +23,11 @@
 
     ```$ npm install```
 
-4. Start up the JSON server.
-
-    ```$ json-server --watch books.json```   
-
-5. Open a new terminal tab and run the following command.
+4. Start your server.
 
     ```$ npm start```
     
-6. Open your browser and navigate to `http://localhost:3000/books` to see your backend data.
-7. Open a new tab and navigate to `http://localhost:3001` to see your app.
+5. Open a new tab and navigate to `http://localhost:3000` to see your app.
 
 <a name="tech-stack"/>
 
