@@ -55,7 +55,10 @@ class App extends Component {
 
         {this.state.showPanel === true
         ?
+        <>
         <DetailPanel book={this.findBook()} closePanel={this.closePanel}/>
+        <div id="app-overlay" />
+        </>
         :
         null}
 
