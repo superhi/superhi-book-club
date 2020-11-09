@@ -3,6 +3,11 @@ img {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+@keyframes fadein {
+  0% { opacity: 0; }
+  100% { opacity: 1;} 
+}
+
 .panel {
   background-color: white;
   color: black;
@@ -14,4 +19,5 @@ img {
   top: 0;
   z-index: 1;
   padding: 4rem;
+  animation: fadein 0.5s;
 }
