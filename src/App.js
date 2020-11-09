@@ -11,7 +11,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:3000/books")
+    fetch("https://my-json-server.typicode.com/isabelxklee/book-club-json/books")
     .then(response => response.json())
     .then((booksArray) => {
       this.setState({

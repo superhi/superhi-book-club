@@ -114,3 +114,27 @@ div#line {
   z-index: 1;
   animation: background-fade 0.5s;
 }
+
+/* mobile responsive styles */
+
+@media only screen and (max-width: 892px) {
+  body {
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .panel {
+    width: 70%;
+    text-align: left;
+    right: none;
+  }
+
+  #close-icon {
+    float: inherit;
+    width: 15%;
+  }
+
+  .books-container {
+    margin: 0;
+  }
+}
