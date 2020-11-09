@@ -6,7 +6,12 @@ body {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+}
+
+h1#title {
+  text-align: center;
 }
 
 h1#panel-title {
@@ -26,11 +31,30 @@ img {
   width: 10%;
   float: right;
   margin-top: -1rem;
+  cursor: pointer;
 }
 
 .book {
   max-width: 100%;
   margin-bottom: -2rem;
+  cursor: pointer;
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  50% {
+    transform: translate(0);
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .book#left {
@@ -59,6 +83,7 @@ img {
   padding: 4rem;
   animation: fadein 0.5s;
 }
+
 
 .books-container {
   display: grid;
