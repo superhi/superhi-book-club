@@ -57,7 +57,7 @@ class App extends Component {
         ?
         <>
         <DetailPanel book={this.findBook()} closePanel={this.closePanel}/>
-        <div id="app-overlay" />
+        <div id="app-overlay" onClick={this.closePanel}/>
         </>
         :
         null}
