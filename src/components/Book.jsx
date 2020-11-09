@@ -14,7 +14,6 @@ class Book extends Component {
 
   render () {
     let {id, author, title, image} = this.props.book
-    console.log(this.state.showPanel)
 
     return (
       <>
@@ -30,7 +29,7 @@ class Book extends Component {
         }
         {this.state.showPanel === true
         ?
-          <DetailPanel/>
+          <DetailPanel book={this.props.book}/>
         :
           null}
       </>
