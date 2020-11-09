@@ -1,8 +1,5 @@
 # Book Club 📚
 
-![home page of portfolio](https://i.imgur.com/7mLU4QU.png)
-
-
 ## Table of contents
 * [Features](#features)
 * [Getting started](#getting-started)
