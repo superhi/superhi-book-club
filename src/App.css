@@ -3,38 +3,13 @@ img {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.image-stack::after {
-  content: ' ';
-  display: table;
-  clear: both;
-}
-
-.book {
-  margin-left: 4rem;
-}
-
-.book#top {
-  float: left;
-  width: 75%;
-  margin-right: -100%;
-  position: relative;
-  padding-top: 10%;
-  z-index: 1;
-}
-
-.book#bottom {
-  float: right;
-  width: 80%;
-  margin-bottom: 14rem;
-}
-
 .panel {
   background-color: white;
   color: black;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  z-index: 2;
-  position: fixed;
+  /* position: fixed; */
   height: 100%;
   width: 50%;
   right: 0;
+  z-index: 1;
 }
