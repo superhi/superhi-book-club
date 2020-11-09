@@ -7,7 +7,7 @@ function BooksContainer(props) {
   })
 
   return (
-    <div className="image-stack">
+    <div className="books-container">
       {booksArray}
     </div>
   )

@@ -6,12 +6,21 @@ class Book extends Component {
   }
 
   render () {
-    let {author, title, image} = this.props.book
+    let {id, author, title, image} = this.props.book
 
     return (
-      <div className="book" id="top">
-        <img src={image} alt={`Book cover for ${title} by ${author}`} onClick={this.handleClick}/>
-      </div>
+      <>
+      {id % 2 === 0
+        ?
+        <div className="book" id="left">
+          <img src={image} alt={`Book cover for ${title} by ${author}`} onClick={this.handleClick}/>
+        </div>
+        : 
+        <div className="book" id="right">
+          <img src={image} alt={`Book cover for ${title} by ${author}`} onClick={this.handleClick}/>
+        </div>
+      }
+      </>
     )
   }
 }

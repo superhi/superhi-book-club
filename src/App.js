@@ -51,7 +51,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <h1>Book club</h1>
+        <h1>SuperHi Book Club</h1>
 
         {this.state.showPanel === true
         ?

@@ -1,6 +1,44 @@
+body {
+  background-color: #2727e6;
+  color: white;
+  font-family: "PX Grotesk", Helvetica, Arial, sans-serif;
+  padding: 4rem;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h1#panel-title {
+  margin-top: 3rem;
+}
+
 img {
-  width: 30%;
+  width: 65%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 0.4rem;
+}
+
+#close-icon {
+  box-shadow: none;
+  border: none;
+  background-color: white;
+  width: 10%;
+  float: right;
+  margin-top: -1rem;
+}
+
+.book {
+  max-width: 100%;
+  margin-bottom: -2rem;
+}
+
+.book#left {
+  transform: rotate(5deg);
+}
+
+.book#right {
+  transform: rotate(-5deg);
 }
 
 @keyframes fadein {
@@ -20,4 +58,17 @@ img {
   z-index: 1;
   padding: 4rem;
   animation: fadein 0.5s;
+}
+
+.books-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  margin: 6rem 4em;
+  text-align: center;
+}
+
+div#line {
+  width: 10%;
+  border: 2px solid black;
+  margin-top: 2rem;
 }
