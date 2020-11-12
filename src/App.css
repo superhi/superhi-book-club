@@ -1,7 +1,7 @@
 body {
   background-color: #2727e6;
   color: white;
-  font-family: "PX Grotesk", Helvetica, Arial, sans-serif;
+  font-family: 'PX Grotesk', Helvetica, Arial, sans-serif;
   padding: 4rem;
 }
 
@@ -66,13 +66,21 @@ img {
 }
 
 @keyframes fadein {
-  0% { opacity: 0; }
-  100% { opacity: 1;} 
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes background-fade {
-  0% { opacity: 0; }
-  100% { opacity: 0.4;} 
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.4;
+  }
 }
 
 .panel {
@@ -88,7 +96,6 @@ img {
   padding: 4rem;
   animation: fadein 0.5s;
 }
-
 
 .books-container {
   display: grid;
@@ -108,11 +115,11 @@ div#line {
   display: block; /* Hidden by default */
   width: 100%; /* Full width (cover the whole page) */
   height: 100%; /* Full height (cover the whole page) */
-  top: 0; 
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
   z-index: 1; /* Specify a stack order in case you're using a different order for other elements */
   cursor: pointer; /* Add a pointer on hover */
 }

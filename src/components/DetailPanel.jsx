@@ -10,11 +10,11 @@ function DetailPanel(props) {
 
   return (
     <div className="panel">
-      <img src={icon} onClick={handleClick} id="close-icon" alt="Click to close this window."/>
+      <img src={icon} onClick={handleClick} id="close-icon" alt="Click to close this window." />
       <h1 id="panel-title">{title}</h1>
       <h3>By {author}</h3>
       <p>{description}</p>
-      <div id="line"/>
+      <div id="line" />
       <p>Published in {published}</p>
     </div>
   )

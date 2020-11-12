@@ -7,23 +7,23 @@ class App extends Component {
   state = {
     books: [],
     selectedBook: 0,
-    showPanel: false
+    showPanel: false,
   }
 
   componentDidMount() {
-    fetch("https://my-json-server.typicode.com/isabelxklee/book-club-json/books")
-    .then(response => response.json())
-    .then((booksArray) => {
-      this.setState({
-        books: booksArray
+    fetch('https://my-json-server.typicode.com/isabelxklee/book-club-json/books')
+      .then((response) => response.json())
+      .then((booksArray) => {
+        this.setState({
+          books: booksArray,
+        })
       })
-    })
   }
 
   pickBook = (bookId) => {
     this.setState({
       selectedBook: bookId,
-      showPanel: true
+      showPanel: true,
     })
   }
 
@@ -41,11 +41,11 @@ class App extends Component {
 
   closePanel = () => {
     this.setState({
-      showPanel: false
+      showPanel: false,
     })
   }
 
-  render () {
+  render() {
     console.log(this.state.selectedBook)
     console.log(this.findBook())
 
@@ -53,16 +53,14 @@ class App extends Component {
       <div className="App">
         <h1 id="title">SuperHi Book Club</h1>
 
-        {this.state.showPanel === true
-        ?
-        <>
-        <DetailPanel book={this.findBook()} closePanel={this.closePanel}/>
-        <div id="app-overlay" onClick={this.closePanel}/>
-        </>
-        :
-        null}
+        {this.state.showPanel === true ? (
+          <>
+            <DetailPanel book={this.findBook()} closePanel={this.closePanel} />
+            <div id="app-overlay" onClick={this.closePanel} />
+          </>
+        ) : null}
 
-        <BooksContainer books={this.state.books} pickBook={this.pickBook}/>
+        <BooksContainer books={this.state.books} pickBook={this.pickBook} />
       </div>
     )
   }

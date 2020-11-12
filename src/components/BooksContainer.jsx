@@ -6,11 +6,7 @@ function BooksContainer(props) {
     return <Book key={book.id} book={book} pickBook={props.pickBook} />
   })
 
-  return (
-    <div className="books-container">
-      {booksArray}
-    </div>
-  )
+  return <div className="books-container">{booksArray}</div>
 }
 
 export default BooksContainer
