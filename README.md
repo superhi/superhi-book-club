@@ -12,6 +12,7 @@
 
 - Browse through a list of amazing books written by Black authors.
 - Click on a book to open up a side panel and see more details.
+- Backend data: https://my-json-server.typicode.com/isabelxklee/book-club-json/books
 
 <a name="getting-started"/>
 
