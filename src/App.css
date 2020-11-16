@@ -124,6 +124,23 @@ div#line {
   cursor: pointer; /* Add a pointer on hover */
 }
 
+div#search {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+label, input {
+  font-size: 1.2rem;
+}
+
+input {
+  padding: 0.6em;
+  font-family: 'PX Grotesk', Helvetica, Arial, sans-serif;
+  font-size: 1.2em;
+  margin: 0.4em 0em 1.2em 0em;
+  width: 25%;
+}
+
 /* mobile responsive styles */
 
 @media only screen and (max-width: 700px) {
