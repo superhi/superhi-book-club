@@ -51,7 +51,24 @@ class App extends Component {
     })
   }
 
+  filterBooks = () => {
+    const {searchTerm, books} = this.state
+    let newArray = []
+
+    if (searchTerm === "") {
+      newArray = books
+    } else {
+      newArray = books.filter((book) => {
+        return book.title.toLowerCase().includes(searchTerm.toLowerCase()) || book.author.toLowerCase().includes(searchTerm.toLowerCase())
+      })
+    }
+
+    return newArray
+  }
+
   render() {
+    console.log(this.filterBooks())
+
     return (
       <div className="App">
         <h1 id="title">SuperHi Book Club</h1>
@@ -65,7 +82,7 @@ class App extends Component {
 
         <Search searchTerm={this.state.searchTerm} handleSearchTerm={this.handleSearchTerm} />
 
-        <BooksContainer books={this.state.books} pickBook={this.pickBook} />
+        <BooksContainer books={this.filterBooks()} pickBook={this.pickBook} />
       </div>
     )
   }
