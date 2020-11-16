@@ -10,7 +10,7 @@
 
 ## Features
 
-- Brose through a list of amazing books written by Black authors.
+- Browse through a list of amazing books written by Black authors.
 - Click on a book to open up a side panel and see more details.
 
 <a name="getting-started"/>
