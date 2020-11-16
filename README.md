@@ -10,8 +10,9 @@
 
 ## Features
 
-- Brose through a list of amazing books written by Black authors.
+- Browse through a list of amazing books written by Black authors.
 - Click on a book to open up a side panel and see more details.
+- Backend data: https://my-json-server.typicode.com/isabelxklee/book-club-json/books
 
 <a name="getting-started"/>
 
@@ -24,11 +25,11 @@
 2. Clone this repo and cd into the directory.
 3. Install all the dependencies.
 
-   `$ npm install`
+   `$ yarn install`
 
 4. Start your server.
 
-   `$ npm start`
+   `$ yarn start`
 
 5. Open a new tab and navigate to `http://localhost:3000` to see your app.
 
