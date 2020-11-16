@@ -2,12 +2,14 @@ import React, {Component} from 'react'
 import './App.css'
 import BooksContainer from './components/BooksContainer.jsx'
 import DetailPanel from './components/DetailPanel.jsx'
+import Search from './components/Search.jsx'
 
 class App extends Component {
   state = {
     books: [],
-    selectedBook: 0,
+    selectedBookId: 0,
     showPanel: false,
+    searchTerm: ""
   }
 
   componentDidMount() {
@@ -22,19 +24,17 @@ class App extends Component {
 
   pickBook = (bookId) => {
     this.setState({
-      selectedBook: bookId,
+      selectedBookId: bookId,
       showPanel: true,
     })
   }
 
   findBook = () => {
-    let {books, selectedBook} = this.state
+    let {books, selectedBookId} = this.state
 
-    if (selectedBook === 0) {
-      return books
-    } else {
+    if (selectedBookId !== 0) {
       return books.find((book) => {
-        return book.id === this.state.selectedBook
+        return book.id === this.state.selectedBookId
       })
     }
   }
@@ -45,10 +45,13 @@ class App extends Component {
     })
   }
 
-  render() {
-    console.log(this.state.selectedBook)
-    console.log(this.findBook())
+  handleSearchTerm = (input) => {
+    this.setState({
+      searchTerm: input
+    })
+  }
 
+  render() {
     return (
       <div className="App">
         <h1 id="title">SuperHi Book Club</h1>
@@ -59,6 +62,8 @@ class App extends Component {
             <div id="app-overlay" onClick={this.closePanel} />
           </>
         ) : null}
+
+        <Search searchTerm={this.state.searchTerm} handleSearchTerm={this.handleSearchTerm} />
 
         <BooksContainer books={this.state.books} pickBook={this.pickBook} />
       </div>
