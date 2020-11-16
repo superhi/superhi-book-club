@@ -9,12 +9,7 @@ const Search = (props) => {
     <div id="search">
       <label>Search by author or title</label>
       <br />
-      <input
-        type="text"
-        name="search"
-        value={props.searchTerm}
-        onChange={handleChange}
-      />
+      <input type="text" name="search" value={props.searchTerm} onChange={handleChange} />
     </div>
   )
 }

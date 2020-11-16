@@ -9,7 +9,7 @@ class App extends Component {
     books: [],
     selectedBookId: 0,
     showPanel: false,
-    searchTerm: ""
+    searchTerm: '',
   }
 
   componentDidMount() {
@@ -47,7 +47,7 @@ class App extends Component {
 
   handleSearchTerm = (input) => {
     this.setState({
-      searchTerm: input
+      searchTerm: input,
     })
   }
 
@@ -55,11 +55,14 @@ class App extends Component {
     const {searchTerm, books} = this.state
     let newArray = []
 
-    if (searchTerm === "") {
+    if (searchTerm === '') {
       newArray = books
     } else {
       newArray = books.filter((book) => {
-        return book.title.toLowerCase().includes(searchTerm.toLowerCase()) || book.author.toLowerCase().includes(searchTerm.toLowerCase())
+        return (
+          book.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          book.author.toLowerCase().includes(searchTerm.toLowerCase())
+        )
       })
     }
 

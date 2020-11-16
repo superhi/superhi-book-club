@@ -129,7 +129,8 @@ div#search {
   margin-top: 4rem;
 }
 
-label, input {
+label,
+input {
   font-size: 1.2rem;
 }
 
