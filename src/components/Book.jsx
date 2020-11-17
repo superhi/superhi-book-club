@@ -4,7 +4,7 @@ function Book(props) {
   const {id, image, title, author} = props.book
 
   const handleClick = () => {
-    props.pickBook(id)
+    props.pickBook(props.book)
   }
 
   return (

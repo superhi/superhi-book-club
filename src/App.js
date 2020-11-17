@@ -7,8 +7,7 @@ import Search from './components/Search.jsx'
 class App extends Component {
   state = {
     books: [],
-    selectedBookId: 0,
-    showPanel: false,
+    selectedBook: null,
     searchTerm: '',
   }
 
@@ -22,26 +21,15 @@ class App extends Component {
       })
   }
 
-  pickBook = (bookId) => {
+  pickBook = (book) => {
     this.setState({
-      selectedBookId: bookId,
-      showPanel: true,
+      selectedBook: book
     })
-  }
-
-  findBook = () => {
-    let {books, selectedBookId} = this.state
-
-    if (selectedBookId !== 0) {
-      return books.find((book) => {
-        return book.id === this.state.selectedBookId
-      })
-    }
   }
 
   closePanel = () => {
     this.setState({
-      showPanel: false,
+      selectedBook: null,
     })
   }
 
@@ -70,21 +58,18 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.filterBooks())
-
     return (
       <div className="App">
         <h1 id="title">SuperHi Book Club</h1>
 
-        {this.state.showPanel === true ? (
+        {this.state.selectedBook &&
           <>
-            <DetailPanel book={this.findBook()} closePanel={this.closePanel} />
+            <DetailPanel book={this.state.selectedBook} closePanel={this.closePanel} />
             <div id="app-overlay" onClick={this.closePanel} />
           </>
-        ) : null}
+        }
 
         <Search searchTerm={this.state.searchTerm} handleSearchTerm={this.handleSearchTerm} />
-
         <BooksContainer books={this.filterBooks()} pickBook={this.pickBook} />
       </div>
     )
