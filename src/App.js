@@ -39,6 +39,10 @@ class App extends Component {
     })
   }
 
+  reformatString = (bookAttribute, searchTerm) => (
+    bookAttribute.toLowerCase().includes(searchTerm.toLowerCase())
+  )
+
   filterBooks = () => {
     const {searchTerm, books} = this.state
     let newArray = []
@@ -48,9 +52,7 @@ class App extends Component {
     } else {
       newArray = books.filter(
         (book) =>
-        // create a helper method that does this and then invoke it here
-          book.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          book.author.toLowerCase().includes(searchTerm.toLowerCase())
+          this.reformatString(book.title, searchTerm) || this.reformatString(book.author, searchTerm)
       )
     }
 
