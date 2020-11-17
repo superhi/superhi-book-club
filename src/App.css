@@ -8,14 +8,12 @@ body {
 h1 {
   font-size: 2.4rem;
   line-height: 2.4rem;
-}
-
-h1#title {
   text-align: center;
 }
 
 h1#panel-title {
   margin-top: 3rem;
+  text-align: left;
 }
 
 img {
@@ -44,6 +42,14 @@ img {
   animation-fill-mode: forwards;
 }
 
+#left {
+  transform: rotate(5deg);
+}
+
+#right {
+  transform: rotate(-5deg);
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -55,14 +61,6 @@ img {
   100% {
     opacity: 1;
   }
-}
-
-.book#left {
-  transform: rotate(5deg);
-}
-
-.book#right {
-  transform: rotate(-5deg);
 }
 
 @keyframes fadein {
@@ -83,7 +81,7 @@ img {
   }
 }
 
-.panel {
+#side-panel {
   background-color: white;
   color: black;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -97,20 +95,20 @@ img {
   animation: fadein 0.5s;
 }
 
-.books-container {
+#books-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
   margin: 6rem 4em;
   text-align: center;
 }
 
-div#line {
-  width: 10%;
+hr {
+  margin: 2rem 0 0 0;
+  width: 15%;
   border: 2px solid black;
-  margin-top: 2rem;
 }
 
-#app-overlay {
+#overlay {
   position: fixed; /* Sit on top of the page content */
   display: block; /* Hidden by default */
   width: 100%; /* Full width (cover the whole page) */
@@ -124,7 +122,7 @@ div#line {
   cursor: pointer; /* Add a pointer on hover */
 }
 
-div#search {
+#search {
   text-align: center;
   margin-top: 4rem;
 }
@@ -150,7 +148,7 @@ input {
     text-align: center;
   }
 
-  .panel {
+  #side-panel {
     width: 70%;
     text-align: left;
     right: none;
@@ -162,7 +160,7 @@ input {
     bottom: 10rem;
   }
 
-  .books-container {
+  #books-container {
     margin: 4rem 0rem;
   }
 }

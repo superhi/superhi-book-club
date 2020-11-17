@@ -8,9 +8,9 @@ const Book = (props) => {
   }
 
   return (
-    <div className="book" id={id % 2 === 0 ? 'left' : 'right'}>
+    <article className="book" id={id % 2 === 0 ? 'left' : 'right'}>
       <img src={image} alt={`Book cover for ${title} by ${author}`} onClick={handleClick} />
-    </div>
+    </article>
   )
 }
 

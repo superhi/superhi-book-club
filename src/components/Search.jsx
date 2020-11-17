@@ -6,11 +6,11 @@ const Search = (props) => {
   }
 
   return (
-    <div id="search">
+    <section id="search">
       <label>Search by author or title</label>
       <br />
       <input type="text" name="search" value={props.searchTerm} onChange={handleChange} />
-    </div>
+    </section>
   )
 }
 

@@ -39,20 +39,18 @@ class App extends Component {
     })
   }
 
-  reformatString = (bookAttribute, searchTerm) => (
-    bookAttribute.toLowerCase().includes(searchTerm.toLowerCase())
-  )
-
   filterBooks = () => {
     const {searchTerm, books} = this.state
     let newArray = []
+
+    const reformatString = (bookAttribute, searchTerm) =>
+      bookAttribute.toLowerCase().includes(searchTerm.toLowerCase())
 
     if (searchTerm === '') {
       newArray = books
     } else {
       newArray = books.filter(
-        (book) =>
-          this.reformatString(book.title, searchTerm) || this.reformatString(book.author, searchTerm)
+        (book) => reformatString(book.title, searchTerm) || reformatString(book.author, searchTerm)
       )
     }
 
@@ -61,19 +59,19 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <h1 id="title">SuperHi Book Club</h1>
+      <main>
+        <h1>SuperHi Book Club</h1>
 
         {this.state.selectedBook && (
           <>
             <DetailPanel book={this.state.selectedBook} closePanel={this.closePanel} />
-            <div id="app-overlay" onClick={this.closePanel} />
+            <section id="overlay" onClick={this.closePanel} />
           </>
         )}
 
         <Search searchTerm={this.state.searchTerm} handleSearchTerm={this.handleSearchTerm} />
         <BooksContainer books={this.filterBooks()} pickBook={this.pickBook} />
-      </div>
+      </main>
     )
   }
 }
