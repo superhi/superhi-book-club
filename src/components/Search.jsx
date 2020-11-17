@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Search = (props) => {
-  let handleChange = (event) => {
+  const handleChange = (event) => {
     props.handleSearchTerm(event.target.value)
   }
 

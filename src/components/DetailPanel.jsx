@@ -1,10 +1,10 @@
 import React from 'react'
 import icon from '../assets/icon-close.png'
 
-function DetailPanel(props) {
-  let {title, author, description, published} = props.book
+const DetailPanel = (props) => {
+  const {title, author, description, published} = props.book
 
-  let handleClick = () => {
+  const handleClick = () => {
     props.closePanel()
   }
 

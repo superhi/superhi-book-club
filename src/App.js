@@ -23,7 +23,7 @@ class App extends Component {
 
   pickBook = (book) => {
     this.setState({
-      selectedBook: book
+      selectedBook: book,
     })
   }
 
@@ -46,12 +46,12 @@ class App extends Component {
     if (searchTerm === '') {
       newArray = books
     } else {
-      newArray = books.filter((book) => {
-        return (
+      newArray = books.filter(
+        (book) =>
+        // create a helper method that does this and then invoke it here
           book.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
           book.author.toLowerCase().includes(searchTerm.toLowerCase())
-        )
-      })
+      )
     }
 
     return newArray
@@ -62,12 +62,12 @@ class App extends Component {
       <div className="App">
         <h1 id="title">SuperHi Book Club</h1>
 
-        {this.state.selectedBook &&
+        {this.state.selectedBook && (
           <>
             <DetailPanel book={this.state.selectedBook} closePanel={this.closePanel} />
             <div id="app-overlay" onClick={this.closePanel} />
           </>
-        }
+        )}
 
         <Search searchTerm={this.state.searchTerm} handleSearchTerm={this.handleSearchTerm} />
         <BooksContainer books={this.filterBooks()} pickBook={this.pickBook} />
