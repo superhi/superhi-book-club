@@ -10,7 +10,12 @@ const DetailPanel = (props) => {
 
   return (
     <aside className="side-panel">
-      <img src={icon} onClick={handleClick} className="close-icon" alt="Click to close this window." />
+      <img
+        src={icon}
+        onClick={handleClick}
+        className="close-icon"
+        alt="Click to close this window."
+      />
       <h1 className="panel-title">{title}</h1>
       <h3>By {author}</h3>
       <p>{description}</p>
