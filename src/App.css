@@ -11,7 +11,7 @@ h1 {
   text-align: center;
 }
 
-h1#panel-title {
+h1.panel-title {
   margin-top: 3rem;
   text-align: left;
 }
@@ -22,7 +22,7 @@ img {
   border-radius: 0.4rem;
 }
 
-#close-icon {
+.close-icon {
   box-shadow: none;
   border: none;
   background-color: white;
@@ -42,11 +42,11 @@ img {
   animation-fill-mode: forwards;
 }
 
-#left {
+.left {
   transform: rotate(5deg);
 }
 
-#right {
+.right {
   transform: rotate(-5deg);
 }
 
@@ -81,7 +81,7 @@ img {
   }
 }
 
-#side-panel {
+.side-panel {
   background-color: white;
   color: black;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -95,7 +95,7 @@ img {
   animation: fadein 0.5s;
 }
 
-#books-container {
+.books-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
   margin: 6rem 4em;
@@ -108,7 +108,7 @@ hr {
   border: 2px solid black;
 }
 
-#overlay {
+.overlay {
   position: fixed; /* Sit on top of the page content */
   display: block; /* Hidden by default */
   width: 100%; /* Full width (cover the whole page) */
@@ -122,7 +122,7 @@ hr {
   cursor: pointer; /* Add a pointer on hover */
 }
 
-#search {
+.search {
   text-align: center;
   margin-top: 4rem;
 }
@@ -153,19 +153,19 @@ input {
     text-align: center;
   }
 
-  #side-panel {
+  .side-panel {
     width: 70%;
     text-align: left;
     right: none;
   }
 
-  #close-icon {
+  .close-icon {
     position: absolute;
     float: right;
     bottom: 10rem;
   }
 
-  #books-container {
+  .books-container {
     margin: 4rem 0rem;
   }
 }

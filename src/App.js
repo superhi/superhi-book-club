@@ -65,7 +65,7 @@ class App extends Component {
         {this.state.selectedBook && (
           <>
             <DetailPanel book={this.state.selectedBook} closePanel={this.closePanel} />
-            <section id="overlay" onClick={this.closePanel} />
+            <section className="overlay" onClick={this.closePanel} />
           </>
         )}
 
