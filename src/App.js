@@ -12,7 +12,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch('https://my-json-server.typicode.com/isabelxklee/book-club-json/books')
+    fetch('https://book-club-json.herokuapp.com/books')
       .then((response) => response.json())
       .then((booksArray) => {
         this.setState({
