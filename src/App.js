@@ -43,14 +43,14 @@ class App extends Component {
     const {searchTerm, books} = this.state
     let newArray = []
 
-    const reformatString = (bookAttribute, searchTerm) =>
+    const stringSearch = (bookAttribute, searchTerm) =>
       bookAttribute.toLowerCase().includes(searchTerm.toLowerCase())
 
     if (searchTerm === '') {
       newArray = books
     } else {
       newArray = books.filter(
-        (book) => reformatString(book.title, searchTerm) || reformatString(book.author, searchTerm)
+        (book) => stringSearch(book.title, searchTerm) || stringSearch(book.author, searchTerm)
       )
     }
 

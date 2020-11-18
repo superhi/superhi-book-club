@@ -130,14 +130,19 @@ hr {
 label,
 input {
   font-size: 1.2rem;
+  display: block;
+}
+
+label {
+  margin-bottom: 1rem;
 }
 
 input {
   padding: 0.6em;
   font-family: 'PX Grotesk', Helvetica, Arial, sans-serif;
   font-size: 1.2em;
-  margin: 0.4em 0em 1.2em 0em;
-  width: 25%;
+  margin: auto;
+  width: 50%;
 }
 
 /* mobile responsive styles */
