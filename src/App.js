@@ -68,9 +68,7 @@ class App extends Component {
           <BooksContainer books={this.filterBooks()} pickBook={this.pickBook} />
           <DetailPanel book={this.state.selectedBook} closePanel={this.closePanel} />
         </section>
-        <section className="search-container">
-          <Search searchTerm={this.state.searchTerm} handleSearchTerm={this.handleSearchTerm} />
-        </section>
+        <Search searchTerm={this.state.searchTerm} handleSearchTerm={this.handleSearchTerm} />
       </main>
     )
   }
