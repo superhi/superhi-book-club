@@ -64,7 +64,9 @@ class App extends Component {
     return (
       <main>
         <header>
-          <img src={logo} alt="Black logo for 'SuperHi's Book Club'" className="logo" />
+          <a href="/">
+            <img src={logo} alt="Black logo for 'SuperHi's Book Club'" className="logo" />
+          </a>
         </header>
         {/* <span className="marquee">
           <span className="marquee-text">

@@ -16,17 +16,23 @@ p {
 }
 
 p.author,
-p.description {
+p.description,
+p.date {
   text-align: left;
 }
 
-p.author {
+p.author,
+p.date {
   font-family: 'Libre Baskerville', serif;
   font-style: italic;
 }
 
 p.description {
   font-family: 'Libre Baskerville', serif;
+}
+
+p.date {
+  margin-bottom: 5rem;
 }
 
 /* span.marquee {
@@ -166,6 +172,8 @@ input {
   .books-container,
   .side-panel {
     z-index: 0;
+    float: none;
+    height: 100%;
   }
 
   .side-panel.empty {
@@ -176,15 +184,13 @@ input {
     position: fixed;
     top: 0;
     right: 0;
-    height: 100%;
     z-index: 200;
     border-left: none;
     padding: 1rem;
   }
 
-  .featured-book-info > img {
-    height: 100%;
-    width: 21rem;
+  img.book.featured {
+    height: 32.4rem;
   }
 
   .books-container {
@@ -192,7 +198,6 @@ input {
     grid-column-gap: 2rem;
     grid-row-gap: 2rem;
     padding: 1.2rem 1.2rem 10rem 1.2rem;
-    margin-bottom: 10rem;
   }
 
   .main-container {

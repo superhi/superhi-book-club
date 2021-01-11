@@ -11,7 +11,7 @@ const DetailPanel = ({book}) => (
       <h1 className="panel-title">{book.title}</h1>
       <p className="author">By {book.author}</p>
       <p className="description">{book.description}</p>
-      <p className="author">Published in {book.published}</p>
+      <p className="date">Published in {book.published}</p>
     </section>
   </aside>
 )
