@@ -12,7 +12,7 @@ const Book = ({book, pickBook}) => {
         src={book.image}
         alt={`Book cover for ${book.title} by ${book.author}`}
         onClick={handleClick}
-        className="book"
+        className="book list"
       />
       <h3>{book.title}</h3>
       <p className="author">by {book.author}</p>

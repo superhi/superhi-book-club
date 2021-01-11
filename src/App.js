@@ -5,6 +5,7 @@ import DetailPanel from './components/DetailPanel.jsx'
 import EmptyPanel from './components/EmptyPanel.jsx'
 import Search from './components/Search.jsx'
 import logo from './assets/logo-book-club.png'
+import icon from './assets/icon-close.png'
 
 class App extends Component {
   state = {
@@ -63,7 +64,7 @@ class App extends Component {
     return (
       <main>
         <header>
-          <img src={logo} alt="Black logo for 'SuperHi's Book Club'" id="logo" />
+          <img src={logo} alt="Black logo for 'SuperHi's Book Club'" className="logo" />
         </header>
         {/* <span className="marquee">
           <span className="marquee-text">
@@ -76,7 +77,10 @@ class App extends Component {
         <section className="main-container">
           <BooksContainer books={this.filterBooks()} pickBook={this.pickBook} />
           {this.state.selectedBook ? (
-            <DetailPanel book={this.state.selectedBook} closePanel={this.closePanel} />
+            <>
+              <img src={icon} alt="Close Icon" className="icon" onClick={this.closePanel} />
+              <DetailPanel book={this.state.selectedBook} closePanel={this.closePanel} />
+            </>
           ) : (
             <EmptyPanel />
           )}
