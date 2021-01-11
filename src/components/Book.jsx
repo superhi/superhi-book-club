@@ -14,7 +14,7 @@ const Book = ({book, pickBook}) => {
         onClick={handleClick}
         className="book"
       />
-      <p>{book.title}</p>
+      <h3>{book.title}</h3>
       <p className="author">by {book.author}</p>
     </article>
   )
