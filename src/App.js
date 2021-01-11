@@ -64,11 +64,11 @@ class App extends Component {
         <header>
           <img src={logo} alt="Black logo for 'SuperHi's Book Club'" id="logo"/>
         </header>
+        <Search searchTerm={this.state.searchTerm} handleSearchTerm={this.handleSearchTerm} />
         <section className="main-container">
           <BooksContainer books={this.filterBooks()} pickBook={this.pickBook} />
           <DetailPanel book={this.state.selectedBook} closePanel={this.closePanel} />
         </section>
-        <Search searchTerm={this.state.searchTerm} handleSearchTerm={this.handleSearchTerm} />
       </main>
     )
   }

@@ -67,7 +67,7 @@ header {
 
 .side-panel {
   background-color: #ffe581;
-  padding: 4rem 10.4rem;
+  padding: 4rem 10.4rem 12rem;
   border-left: 3px solid;
 }
 
@@ -97,6 +97,10 @@ header {
   display: flex;
   align-items: center;
   border-top: 3px solid black;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
 }
 
 .search > input {
