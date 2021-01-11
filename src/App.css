@@ -7,7 +7,6 @@ body {
 h1 {
   font-size: 2.4rem;
   line-height: 2.4rem;
-  text-align: center;
   margin: 1rem 0;
 }
 
@@ -25,7 +24,7 @@ p.description {
   font-family: 'Libre Baskerville', serif;
 }
 
-span.marquee {
+/* span.marquee {
   background-color: black;
   color: white;
   width: 100%;
@@ -35,7 +34,7 @@ span.marquee {
 
 span.marquee-text {
   display: block;
-  animation: moveLeft 500s infinite;
+  animation: moveLeft 100s infinite;
   white-space: nowrap;
 }
 
@@ -44,9 +43,9 @@ span.marquee-text {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-3000rem);
+    transform: translateX(-100rem);
   }
-}
+} */
 
 img {
   object-fit: cover;
@@ -149,24 +148,67 @@ input {
 /* mobile responsive styles */
 
 @media only screen and (max-width: 700px) {
-  body {
-    padding: 2rem;
-    text-align: center;
-  }
-
+  .books-container,
   .side-panel {
-    width: 70%;
-    text-align: left;
-    right: none;
+    /* float: none; */
+    z-index: 0;
   }
 
-  .close-icon {
-    position: absolute;
-    float: right;
-    bottom: 10rem;
+  .side-panel.empty {
+    display: none;
+  }
+
+  .side-panel.detail {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    z-index: 200;
+    border-left: none;
+    padding: 1rem;
+  }
+
+  .featured-book-info > img {
+    height: 100%;
+    width: 21rem;
   }
 
   .books-container {
-    margin: 4rem 0rem;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+    padding: 1.2rem 1.2rem 10rem 1.2rem;
+    margin-bottom: 10rem;
+  }
+
+  .main-container {
+    display: block;
+  }
+
+  header {
+    background-color: #ffbccc;
+    padding: 2rem;
+    text-align: center;
+    z-index: 0;
+  }
+
+  .search {
+    width: 100%;
+    display: block;
+  }
+
+  .search > input {
+    float: none;
+    width: 80%;
+  }
+
+  label {
+    margin: 0;
+    padding: 1rem 0;
+    display: block;
+  }
+
+  p.description {
+    margin-bottom: 4rem;
   }
 }

@@ -8,7 +8,13 @@ const Search = (props) => {
   return (
     <section className="search">
       <label>Search by author or title: </label>
-      <input type="text" name="search" value={props.searchTerm} onChange={handleChange} />
+      <input
+        type="text"
+        name="search"
+        value={props.searchTerm}
+        onChange={handleChange}
+        autoComplete="off"
+      />
     </section>
   )
 }

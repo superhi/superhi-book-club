@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import './App.css'
 import BooksContainer from './components/BooksContainer.jsx'
 import DetailPanel from './components/DetailPanel.jsx'
+import EmptyPanel from './components/EmptyPanel.jsx'
 import Search from './components/Search.jsx'
 import logo from './assets/logo-book-club.png'
 
@@ -64,16 +65,21 @@ class App extends Component {
         <header>
           <img src={logo} alt="Black logo for 'SuperHi's Book Club'" id="logo" />
         </header>
-        <span className="marquee">
+        {/* <span className="marquee">
           <span className="marquee-text">
             SuperHi Book Club is updated the first of every month! Discover new literary
+            favorites...SuperHi Book Club is updated the first of every month! Discover new literary
             favorites...
           </span>
-        </span>
+        </span> */}
         <Search searchTerm={this.state.searchTerm} handleSearchTerm={this.handleSearchTerm} />
         <section className="main-container">
           <BooksContainer books={this.filterBooks()} pickBook={this.pickBook} />
-          <DetailPanel book={this.state.selectedBook} closePanel={this.closePanel} />
+          {this.state.selectedBook ? (
+            <DetailPanel book={this.state.selectedBook} closePanel={this.closePanel} />
+          ) : (
+            <EmptyPanel />
+          )}
         </section>
       </main>
     )
