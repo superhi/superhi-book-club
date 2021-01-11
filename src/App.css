@@ -42,8 +42,11 @@ img#hand-icon {
 img.book {
   width: 100%;
   height: 14.4rem;
-  cursor: pointer;
   border: 3px solid black;
+}
+
+article.book {
+  cursor: url(https://i.imgur.com/jjqCoo2.png), pointer;
 }
 
 .featured-book-info > img {
