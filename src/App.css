@@ -1,22 +1,6 @@
-@font-face {
-  font-family: 'Px Grotesk';
-  font-weight: 400;
-  font-style: normal;
-  src: local('Px Grotesk'), url('./fonts/Px-Grotesk-Regular.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Px Grotesk';
-  font-weight: 700;
-  font-style: normal;
-  src: local('Px Grotesk'), url('./fonts/Px-Grotesk-Bold.woff') format('woff');
-}
-
 body {
-  background-color: #2727e6;
-  color: white;
-  font-family: 'Px Grotesk', sans-serif;
-  padding: 4rem;
+  font-family: 'Work Sans', sans-serif;
+  color: black;
 }
 
 h1 {
@@ -30,10 +14,26 @@ h1.panel-title {
   text-align: left;
 }
 
-img {
-  width: 65%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 0.4rem;
+p {
+  margin: 0;
+}
+
+p.author {
+  font-family: 'Libre Baskerville', serif;
+  font-style: italic;
+}
+
+img#logo {
+  height: 3.4rem;
+  object-fit: cover;
+}
+
+img.book {
+  width: 100%;
+  height: 14.4rem;
+  object-fit: cover;
+  cursor: pointer;
+  border: 3px solid black;
 }
 
 .close-icon {
@@ -46,99 +46,40 @@ img {
   cursor: pointer;
 }
 
-.book {
-  max-width: 100%;
-  margin-bottom: -2rem;
-  cursor: pointer;
-  opacity: 0;
-  animation-name: fadeIn;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-}
-
-.left {
-  transform: rotate(5deg);
-}
-
-.right {
-  transform: rotate(-5deg);
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  50% {
-    transform: translate(0);
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadein {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes background-fade {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0.4;
-  }
+header {
+  background-color: #ffbccc;
+  padding: 2rem;
+  text-align: center;
 }
 
 .side-panel {
-  background-color: white;
-  color: black;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  position: fixed;
-  height: 100%;
-  width: 25%;
-  right: 0;
-  top: 0;
-  z-index: 2;
+  background-color: #ffe581;
   padding: 4rem;
-  animation: fadein 0.5s;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .books-container {
+  background-color: #a7e1f8;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-  margin: 6rem 4em;
-  text-align: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 2rem;
+  grid-row-gap: 4rem;
+  padding: 3rem 5rem;
+}
+
+.search-container {
+  background-color: #50b36f;
+  padding: 1.2rem;
 }
 
 hr {
   margin: 2rem 0 0 0;
   width: 15%;
   border: 2px solid black;
-}
-
-.overlay {
-  position: fixed; /* Sit on top of the page content */
-  display: block; /* Hidden by default */
-  width: 100%; /* Full width (cover the whole page) */
-  height: 100%; /* Full height (cover the whole page) */
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
-  z-index: 1; /* Specify a stack order in case you're using a different order for other elements */
-  cursor: pointer; /* Add a pointer on hover */
-}
-
-.search {
-  text-align: center;
-  margin-top: 4rem;
 }
 
 label,

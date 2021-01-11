@@ -3,6 +3,7 @@ import './App.css'
 import BooksContainer from './components/BooksContainer.jsx'
 import DetailPanel from './components/DetailPanel.jsx'
 import Search from './components/Search.jsx'
+import logo from './assets/logo-book-club.png'
 
 class App extends Component {
   state = {
@@ -60,17 +61,16 @@ class App extends Component {
   render() {
     return (
       <main>
-        <h1>SuperHi Book Club</h1>
-
-        {this.state.selectedBook && (
-          <>
-            <DetailPanel book={this.state.selectedBook} closePanel={this.closePanel} />
-            <section className="overlay" onClick={this.closePanel} />
-          </>
-        )}
-
-        <Search searchTerm={this.state.searchTerm} handleSearchTerm={this.handleSearchTerm} />
-        <BooksContainer books={this.filterBooks()} pickBook={this.pickBook} />
+        <header>
+          <img src={logo} alt="Black logo for 'SuperHi's Book Club'" id="logo"/>
+        </header>
+        <section className="main-container">
+          <BooksContainer books={this.filterBooks()} pickBook={this.pickBook} />
+          <DetailPanel book={this.state.selectedBook} closePanel={this.closePanel} />
+        </section>
+        <section className="search-container">
+          <Search searchTerm={this.state.searchTerm} handleSearchTerm={this.handleSearchTerm} />
+        </section>
       </main>
     )
   }
