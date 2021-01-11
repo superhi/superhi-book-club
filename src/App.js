@@ -62,8 +62,14 @@ class App extends Component {
     return (
       <main>
         <header>
-          <img src={logo} alt="Black logo for 'SuperHi's Book Club'" id="logo"/>
+          <img src={logo} alt="Black logo for 'SuperHi's Book Club'" id="logo" />
         </header>
+        <span className="marquee">
+          <span className="marquee-text">
+            SuperHi Book Club is updated the first of every month! Discover new literary
+            favorites...
+          </span>
+        </span>
         <Search searchTerm={this.state.searchTerm} handleSearchTerm={this.handleSearchTerm} />
         <section className="main-container">
           <BooksContainer books={this.filterBooks()} pickBook={this.pickBook} />
