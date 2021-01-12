@@ -13,7 +13,7 @@ h1 {
 
 h3,
 p {
-  margin: 0.6rem 0;
+  margin: 10px 0;
 }
 
 .author,
@@ -27,8 +27,8 @@ p {
   font-style: italic;
 }
 
-p.date {
-  margin-bottom: 5rem;
+.date {
+  margin-bottom: 80px;
 }
 
 img {
@@ -45,8 +45,8 @@ img.logo {
 }
 
 img.hand {
-  width: 3.2rem;
-  margin-bottom: 1rem;
+  width: 52px;
+  margin-bottom: 16px;
 }
 
 img.book.list {
@@ -56,20 +56,20 @@ img.book.list {
 }
 
 img.book.featured {
-  height: 32.4rem;
+  height: 518px;
 }
 
 img.icon {
   position: fixed;
-  height: 2.8rem;
-  right: 3%;
-  top: 25%;
+  height: 44px;
+  right: 44px;
+  top: 124px;
   cursor: pointer;
 }
 
 header {
   background-color: #ffbccc;
-  padding: 1rem;
+  padding: 16px;
   text-align: center;
   border-bottom: 3px solid black;
 }
@@ -83,34 +83,33 @@ header {
 
 .side-panel {
   background-color: #ffe581;
-  padding: 4rem 8rem;
+  padding: 64px 128px;
   border-left: 3px solid;
   text-align: center;
 }
 
 .empty {
-  font-size: 1.2rem;
+  font-size: 20px;
   text-align: center;
-  padding: 8rem 0;
+  padding: 128px 0;
 }
 
 .main-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .books-container {
   background-color: #a7e1f8;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 2rem;
-  grid-row-gap: 2rem;
-  padding: 3rem 5rem;
+  grid-row-gap: 32px;
+  padding: 48px 60px;
 }
 
 .search {
   background-color: #50b36f;
-  padding: 1.2rem;
+  padding: 20px;
   display: flex;
   align-items: center;
   border-top: 3px solid black;
@@ -126,14 +125,14 @@ header {
 }
 
 label {
-  margin-right: 2rem;
+  margin-right: 32px;
 }
 
 input {
-  padding: 0.6em;
+  padding: 12px;
   font-family: 'Libre Baskerville', serif;
   font-style: italic;
-  font-size: 1.2em;
+  font-size: 20px;
   border: 3px solid black;
   background-color: #50b36f;
 }
@@ -162,22 +161,25 @@ input {
     right: 0;
     z-index: 200;
     border-left: none;
-    padding: 1rem;
+    padding: 16px;
   }
 
   img.book.featured {
-    height: 32.4rem;
+    height: 518px;
   }
 
   img.logo {
     height: 30px;
   }
 
+  img.icon {
+    z-index: 300;
+    top: 700px;
+  }
+
   .books-container {
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 2rem;
-    grid-row-gap: 2rem;
-    padding: 1.2rem 1.2rem 10rem 1.2rem;
+    padding: 20px;
   }
 
   .main-container {
@@ -189,19 +191,14 @@ input {
     display: block;
   }
 
-  .search > input {
+  .search input {
     float: none;
     width: 80%;
   }
 
   label {
     margin: 0;
-    padding: 1rem 0;
+    padding: 16px 0;
     display: block;
-  }
-
-  img.icon {
-    z-index: 300;
-    top: 90%;
   }
 }
