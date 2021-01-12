@@ -177,11 +177,6 @@ input {
     top: 700px;
   }
 
-  .books-container {
-    grid-template-columns: repeat(2, 1fr);
-    padding: 20px;
-  }
-
   .main-container {
     display: block;
   }
@@ -200,5 +195,11 @@ input {
     margin: 0;
     padding: 16px 0;
     display: block;
+  }
+}
+
+@media (max-width: 565px) {
+  .books-container {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
