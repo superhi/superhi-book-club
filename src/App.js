@@ -60,6 +60,8 @@ class App extends Component {
   }
 
   render() {
+    const {books, selectedBook, searchTerm} = this.state
+
     return (
       <main>
         <header>
@@ -69,15 +71,15 @@ class App extends Component {
             </a>
           </h1>
         </header>
-        <Search searchTerm={this.state.searchTerm} handleSearchTerm={this.handleSearchTerm} />
+        <Search searchTerm={searchTerm} handleSearchTerm={this.handleSearchTerm} />
         <section className="main-container">
-          <div className={this.state.selectedBook ? "books-container inactive" : "books-container active"}>
-            {this.state.books.map((book) => (
+          <div className={selectedBook ? 'books-container inactive' : 'books-container active'}>
+            {books.map((book) => (
               <Book key={book.id} book={book} pickBook={this.pickBook} />
             ))}
           </div>
-          {this.state.selectedBook ? (
-            <DetailPanel book={this.state.selectedBook} closePanel={this.closePanel} />
+          {selectedBook ? (
+            <DetailPanel book={selectedBook} closePanel={this.closePanel} />
           ) : (
             <EmptyPanel />
           )}
