@@ -166,6 +166,7 @@ input {
 
   img.book.featured {
     height: 518px;
+    width: 40%;
   }
 
   img.logo {
@@ -174,7 +175,8 @@ input {
 
   img.icon {
     z-index: 300;
-    top: 700px;
+    top: 600px;
+    right: 30px;
   }
 
   .main-container {
@@ -207,5 +209,10 @@ input {
   img.book.list {
     width: 157px;
     height: 210px
+  }
+
+  img.book.featured {
+    height: 518px;
+    width: 100%;
   }
 }
