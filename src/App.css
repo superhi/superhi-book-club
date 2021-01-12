@@ -31,6 +31,10 @@ p {
   margin-bottom: 80px;
 }
 
+article.book {
+  padding-right: 30px;
+}
+
 img {
   object-fit: cover;
 }
@@ -103,7 +107,7 @@ header {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-row-gap: 32px;
-  padding: 48px 60px;
+  padding: 32px;
 }
 
 .search {
@@ -138,6 +142,10 @@ input {
 /* mobile responsive styles */
 
 @media (max-width: 1200px) {
+  article.book {
+    padding-right: 100px;
+  }
+
   .books-container,
   .side-panel {
     z-index: 0;
@@ -198,6 +206,14 @@ input {
 }
 
 @media (max-width: 565px) {
+  article.book {
+    padding-right: 34px;
+  }
+
+  article.book:nth-child(2) {
+    padding-right: 0px;
+  }
+
   .books-container {
     grid-template-columns: repeat(2, 1fr);
     padding: 16px;
