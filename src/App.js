@@ -60,7 +60,7 @@ class App extends Component {
   }
 
   render() {
-    const {books, selectedBook, searchTerm} = this.state
+    const {selectedBook, searchTerm} = this.state
 
     return (
       <main>
@@ -74,7 +74,7 @@ class App extends Component {
         <Search searchTerm={searchTerm} handleSearchTerm={this.handleSearchTerm} />
         <section className="main-container">
           <div className={selectedBook ? 'books-container inactive' : 'books-container active'}>
-            {books.map((book) => (
+            {this.filterBooks().map((book) => (
               <Book key={book.id} book={book} pickBook={this.pickBook} />
             ))}
           </div>

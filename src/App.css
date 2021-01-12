@@ -7,7 +7,10 @@ body {
   overflow: hidden;
 }
 
-h1,
+h1 {
+  margin: 0;
+}
+
 h3,
 p {
   margin: 0.6rem 0;
@@ -38,7 +41,7 @@ img.book {
 }
 
 img.logo {
-  height: 3.4rem;
+  height: 50px;
 }
 
 img.hand {
@@ -68,13 +71,12 @@ header {
   background-color: #ffbccc;
   padding: 1rem;
   text-align: center;
-  z-index: 10;
   border-bottom: 3px solid black;
 }
 
 .books-container,
 .side-panel {
-  height: 17%;
+  height: 100vh;
   float: left;
   overflow: scroll;
 }
@@ -143,7 +145,6 @@ input {
   .side-panel {
     z-index: 0;
     float: none;
-    height: 100%;
   }
 
   .books-container.inactive {
@@ -166,6 +167,10 @@ input {
 
   img.book.featured {
     height: 32.4rem;
+  }
+
+  img.logo {
+    height: 30px;
   }
 
   .books-container {

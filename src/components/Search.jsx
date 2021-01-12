@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Search = (props) => {
+const Search = ({searchTerm, handleSearchTerm}) => {
   const handleChange = (event) => {
-    props.handleSearchTerm(event.target.value)
+    handleSearchTerm(event.target.value)
   }
 
   return (
@@ -11,7 +11,7 @@ const Search = (props) => {
       <input
         type="text"
         name="search"
-        value={props.searchTerm}
+        value={searchTerm}
         onChange={handleChange}
         autoComplete="off"
       />
