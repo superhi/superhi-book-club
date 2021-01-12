@@ -226,8 +226,13 @@ input {
     padding: 16px;
   }
 
+  .books-container.active {
+    height: calc(100vh - 300px);
+  }
+
   .side-panel.detail {
     padding: 24px;
+    margin-bottom: 42px;
   }
 
   img.book.list {
@@ -242,5 +247,9 @@ input {
 
   body {
     overflow: scroll;
+  }
+
+  .date {
+    margin-bottom: 140px;
   }
 }
