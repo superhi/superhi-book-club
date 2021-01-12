@@ -52,7 +52,7 @@ img.hand {
 img.book.list {
   width: 173px;
   height: 233px;
-  cursor: url(./assets/icon-select-book.png), pointer;
+  cursor: url(./assets/icon-select-book.png) 25 25, pointer;
 }
 
 img.book.featured {
