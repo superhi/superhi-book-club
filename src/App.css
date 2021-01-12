@@ -77,7 +77,6 @@ header {
 .books-container,
 .side-panel {
   height: 100vh;
-  float: left;
   overflow: scroll;
 }
 
@@ -120,7 +119,6 @@ header {
 }
 
 .search input {
-  float: right;
   width: 50%;
 }
 
@@ -143,7 +141,6 @@ input {
   .books-container,
   .side-panel {
     z-index: 0;
-    float: none;
   }
 
   .books-container.inactive {
@@ -186,17 +183,17 @@ input {
   .search {
     width: 100%;
     display: block;
+    padding: 6px 20px 20px;
   }
 
   .search input {
-    float: none;
     width: 80%;
   }
 
   label {
     margin: 0;
-    padding: 16px 0;
-    display: block;
+    padding: 10px 0;
+    display: inline-block;
   }
 }
 
@@ -208,7 +205,7 @@ input {
 
   img.book.list {
     width: 157px;
-    height: 210px
+    height: 210px;
   }
 
   img.book.featured {
