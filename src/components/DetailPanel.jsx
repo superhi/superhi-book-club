@@ -1,7 +1,9 @@
 import React from 'react'
+import icon from '../assets/icon-close.png'
 
-const DetailPanel = ({book}) => (
+const DetailPanel = ({book, closePanel}) => (
   <aside className="side-panel detail">
+    <img src={icon} alt="Close Icon" className="icon" onClick={closePanel} />
     <section className="featured-book-info">
       <img
         src={book.image}

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&family=Work+Sans:wght@600&display=swap');
+
 body {
   font-family: 'Work Sans', sans-serif;
   color: black;
@@ -125,7 +127,7 @@ header {
   z-index: 100;
 }
 
-.search > input {
+.search input {
   float: right;
   width: 50%;
 }
