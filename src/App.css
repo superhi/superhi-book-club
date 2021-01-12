@@ -75,12 +75,13 @@ header {
   background-color: #ffbccc;
   padding: 16px;
   text-align: center;
+  height: 40px;
   border-bottom: 3px solid black;
 }
 
 .books-container,
 .side-panel {
-  height: 100vh;
+  height: calc(100vh - 260px);
   overflow: scroll;
 }
 
@@ -119,6 +120,7 @@ header {
   bottom: 0;
   position: fixed;
   width: 100%;
+  height: 60px;
   z-index: 100;
 }
 
@@ -149,6 +151,11 @@ input {
   .books-container,
   .side-panel {
     z-index: 0;
+    height: 100vh;
+  }
+
+  .books-container.active {
+    height: calc(100vh - 240px);
   }
 
   .books-container.inactive {
@@ -166,11 +173,11 @@ input {
     right: 0;
     z-index: 200;
     border-left: none;
-    padding: 16px;
+    padding: 64px 120px;
   }
 
   img.book.featured {
-    height: 518px;
+    height: 500px;
     width: 40%;
   }
 
@@ -199,7 +206,6 @@ input {
   }
 
   label {
-    margin: 0;
     padding: 10px 0;
     display: inline-block;
   }
@@ -219,13 +225,21 @@ input {
     padding: 16px;
   }
 
+  .books-container.active {
+    height: calc(100vh - 200px);
+  }
+
+  .side-panel.detail {
+    padding: 24px;
+  }
+
   img.book.list {
     width: 157px;
     height: 210px;
   }
 
   img.book.featured {
-    height: 518px;
+    height: 520px;
     width: 100%;
   }
 
