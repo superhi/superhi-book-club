@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import './App.css'
-import BooksContainer from './components/BooksContainer.jsx'
+import Book from './components/Book.jsx'
 import DetailPanel from './components/DetailPanel.jsx'
 import EmptyPanel from './components/EmptyPanel.jsx'
 import Search from './components/Search.jsx'
@@ -63,13 +63,19 @@ class App extends Component {
     return (
       <main>
         <header>
-          <a href="/">
-            <img src={logo} alt="Black logo for 'SuperHi's Book Club'" className="logo" />
-          </a>
+          <h1>
+            <a href="/">
+              <img src={logo} alt="Black logo for 'SuperHi's Book Club'" className="logo" />
+            </a>
+          </h1>
         </header>
         <Search searchTerm={this.state.searchTerm} handleSearchTerm={this.handleSearchTerm} />
         <section className="main-container">
-          <BooksContainer books={this.filterBooks()} pickBook={this.pickBook} />
+          <div className={this.state.selectedBook ? "books-container inactive" : "books-container active"}>
+            {this.state.books.map((book) => (
+              <Book key={book.id} book={book} pickBook={this.pickBook} />
+            ))}
+          </div>
           {this.state.selectedBook ? (
             <DetailPanel book={this.state.selectedBook} closePanel={this.closePanel} />
           ) : (
