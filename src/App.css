@@ -35,29 +35,6 @@ p.date {
   margin-bottom: 5rem;
 }
 
-/* span.marquee {
-  background-color: black;
-  color: white;
-  width: 100%;
-  padding: 1rem;
-  display: block;
-}
-
-span.marquee-text {
-  display: block;
-  animation: moveLeft 100s infinite;
-  white-space: nowrap;
-}
-
-@keyframes moveLeft {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100rem);
-  }
-} */
-
 img {
   object-fit: cover;
 }
