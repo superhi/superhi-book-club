@@ -155,7 +155,7 @@ input {
   }
 
   .books-container.active {
-    height: calc(100vh - 240px);
+    height: calc(100vh - 280px);
   }
 
   .books-container.inactive {
@@ -198,6 +198,7 @@ input {
   .search {
     width: 100%;
     display: block;
+    height: 100px;
     padding: 6px 20px 20px;
   }
 
@@ -223,10 +224,6 @@ input {
   .books-container {
     grid-template-columns: repeat(2, 1fr);
     padding: 16px;
-  }
-
-  .books-container.active {
-    height: calc(100vh - 200px);
   }
 
   .side-panel.detail {
