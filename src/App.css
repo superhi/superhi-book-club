@@ -4,7 +4,7 @@ body {
   font-family: 'Work Sans', sans-serif;
   color: black;
   background-color: #a7e1f8;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 h1 {
@@ -201,5 +201,11 @@ input {
 @media (max-width: 565px) {
   .books-container {
     grid-template-columns: repeat(2, 1fr);
+    padding: 16px;
+  }
+
+  img.book.list {
+    width: 157px;
+    height: 210px
   }
 }
