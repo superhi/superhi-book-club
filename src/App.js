@@ -13,14 +13,10 @@ class App extends Component {
     searchTerm: '',
   }
 
-  componentDidMount() {
-    fetch('https://book-club-json.herokuapp.com/books')
-      .then((response) => response.json())
-      .then((booksArray) => {
-        this.setState({
-          books: booksArray,
-        })
-      })
+  async componentDidMount() {
+    const response = await fetch(`https://book-club-json.herokuapp.com/books`)
+    const booksArray = await response.json()
+    this.setState({books: booksArray})
   }
 
   pickBook = (book) => {
