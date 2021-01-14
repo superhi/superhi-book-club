@@ -56,7 +56,7 @@ img.hand {
 img.book.list {
   width: 173px;
   height: 233px;
-  cursor: url(./assets/icon-select-book.png) 25 25, pointer;
+  cursor: pointer;
 }
 
 img.book.featured {
@@ -73,9 +73,8 @@ img.icon {
 
 header {
   background-color: #ffbccc;
-  padding: 16px;
+  padding: 20px;
   text-align: center;
-  height: 40px;
   border-bottom: 3px solid black;
 }
 
@@ -95,7 +94,10 @@ header {
 .empty {
   font-size: 20px;
   text-align: center;
-  padding: 128px 0;
+}
+
+div.empty-book {
+  margin-top: 164px;
 }
 
 .main-container {
@@ -125,11 +127,13 @@ header {
 }
 
 .search input {
-  width: 50%;
+  width: 500px;
+  height: 16px;
 }
 
 label {
-  margin-right: 32px;
+  margin-right: 20px;
+  width: 120px;
 }
 
 input {
@@ -182,7 +186,7 @@ input {
   }
 
   img.logo {
-    height: 30px;
+    height: 32px;
   }
 
   img.icon {

@@ -4,7 +4,7 @@ import Book from './components/Book.jsx'
 import DetailPanel from './components/DetailPanel.jsx'
 import EmptyPanel from './components/EmptyPanel.jsx'
 import Search from './components/Search.jsx'
-import logo from './assets/logo-book-club.png'
+import logo from './assets/logo-superhi-book-club.png'
 
 class App extends Component {
   state = {
