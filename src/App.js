@@ -39,21 +39,19 @@ class App extends Component {
 
   filterBooks = () => {
     const {searchTerm, books} = this.state
-    let newArray = []
 
     const stringSearch = (bookAttribute, searchTerm) =>
       bookAttribute.toLowerCase().includes(searchTerm.toLowerCase())
 
     if (searchTerm === '') {
-      newArray = books
+      return books
     } else {
-      newArray = books.filter(
+      return books.filter(
         (book) => stringSearch(book.title, searchTerm) || stringSearch(book.author, searchTerm)
       )
     }
-
-    return newArray
   }
+
 
   render() {
     const {selectedBook, searchTerm} = this.state
