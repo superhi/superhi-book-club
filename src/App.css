@@ -11,8 +11,15 @@ h1 {
   margin: 0;
 }
 
-h3,
-p {
+h2.book-title {
+  text-align: left;
+}
+
+p.featured {
+  margin: 22px 0;
+}
+
+h3, p {
   margin: 10px 0;
 }
 
@@ -22,13 +29,14 @@ p {
   font-family: 'Libre Baskerville', serif;
   text-align: left;
 }
+
 .author,
 .date {
   font-style: italic;
 }
 
-.date {
-  margin-bottom: 80px;
+p.date.featured {
+  margin-bottom: 200px;
 }
 
 article.book {
@@ -61,6 +69,7 @@ img.book.list {
 
 img.book.featured {
   height: 518px;
+  width: 388px;
 }
 
 img.icon {
@@ -69,6 +78,11 @@ img.icon {
   right: 44px;
   top: 124px;
   cursor: pointer;
+}
+
+div.book-info {
+  width: 388px;
+  margin: auto;
 }
 
 header {
@@ -173,15 +187,14 @@ input {
   .side-panel.detail {
     position: fixed;
     top: 0;
-    right: 0;
     z-index: 200;
     border-left: none;
-    padding: 64px 120px;
+    padding: 70px 0;
+    width: 100%;
   }
 
   img.book.featured {
     height: 500px;
-    width: 40%;
   }
 
   img.logo {
@@ -228,7 +241,6 @@ input {
   }
 
   .side-panel.detail {
-    padding: 24px;
     margin-bottom: 42px;
   }
 
@@ -239,7 +251,11 @@ input {
 
   img.book.featured {
     height: 520px;
-    width: 100%;
+    width: 336px;
+  }
+
+  div.book-info {
+    width: 336px;
   }
 
   body {
