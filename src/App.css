@@ -57,7 +57,7 @@ svg.logo {
   height: 50px;
 }
 
-img.hand {
+svg.hand {
   width: 52px;
   margin-bottom: 16px;
 }
@@ -73,7 +73,7 @@ img.book.featured {
   width: 388px;
 }
 
-img.icon {
+svg.icon {
   position: fixed;
   height: 44px;
   right: 44px;
@@ -202,7 +202,7 @@ input {
     height: 32px;
   }
 
-  img.icon {
+  svg.icon {
     z-index: 300;
     top: 600px;
     right: 30px;
