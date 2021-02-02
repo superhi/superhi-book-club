@@ -4,7 +4,7 @@ import Book from './components/Book.jsx'
 import DetailPanel from './components/DetailPanel.jsx'
 import EmptyPanel from './components/EmptyPanel.jsx'
 import Search from './components/Search.jsx'
-import logo from './assets/logo-superhi-book-club.png'
+import {ReactComponent as Logo} from './assets/logo.svg'
 
 class App extends Component {
   state = {
@@ -52,7 +52,6 @@ class App extends Component {
     }
   }
 
-
   render() {
     const {selectedBook, searchTerm} = this.state
 
@@ -61,7 +60,7 @@ class App extends Component {
         <header>
           <h1>
             <a href="/">
-              <img src={logo} alt="Black logo for 'SuperHi's Book Club'" className="logo" />
+              <Logo alt="Graphic logo for SuperHi's Book Club" className="logo" />
             </a>
           </h1>
         </header>

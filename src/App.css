@@ -19,7 +19,8 @@ p.featured {
   margin: 22px 0;
 }
 
-h3, p {
+h3,
+p {
   margin: 10px 0;
 }
 
@@ -52,7 +53,7 @@ img.book {
   border: 3px solid black;
 }
 
-img.logo {
+svg.logo {
   height: 50px;
 }
 
@@ -197,7 +198,7 @@ input {
     height: 500px;
   }
 
-  img.logo {
+  svg.logo {
     height: 32px;
   }
 
@@ -276,6 +277,4 @@ input {
     margin-right: 0;
     padding: 0 0 10px 0;
   }
-
-  
 }
