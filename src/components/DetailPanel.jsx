@@ -1,5 +1,5 @@
 import React from 'react'
-import {ReactComponent as CloseIcon} from '../assets/icon-close.svg'
+import {ReactComponent as CloseIcon} from '../assets/button-close.svg'
 
 const DetailPanel = ({book, closePanel}) => (
   <aside className="side-panel detail">
