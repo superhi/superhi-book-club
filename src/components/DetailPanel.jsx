@@ -2,7 +2,7 @@ import React from 'react'
 import {ReactComponent as CloseIcon} from '../assets/button-close.svg'
 
 const DetailPanel = ({book, closePanel}) => (
-  <aside className="side-panel detail">
+  <div className="side-panel detail">
     <CloseIcon alt="Close Icon" className="icon" onClick={closePanel} />
     <div className="featured-book-info">
       <img
@@ -17,7 +17,7 @@ const DetailPanel = ({book, closePanel}) => (
         <p className="date featured">Published in {book.published}</p>
       </div>
     </div>
-  </aside>
+  </div>
 )
 
 export default DetailPanel

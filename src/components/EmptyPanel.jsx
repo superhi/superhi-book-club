@@ -2,7 +2,7 @@ import React from 'react'
 import {ReactComponent as HandIcon} from '../assets/icon-hand.svg'
 
 const EmptyPanel = () => (
-  <aside className="side-panel empty">
+  <div className="side-panel empty">
     <div className="empty-book">
       <HandIcon
         className="hand"
@@ -10,7 +10,7 @@ const EmptyPanel = () => (
       />
       <p>Pssst... select a book from the left!</p>
     </div>
-  </aside>
+  </div>
 )
 
 export default EmptyPanel
