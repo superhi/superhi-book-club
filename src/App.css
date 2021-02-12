@@ -71,6 +71,7 @@ img.book.list {
 img.book.featured {
   height: 518px;
   width: 388px;
+  margin-top: 100px;
 }
 
 svg.icon {
@@ -113,7 +114,6 @@ div.books-container {
 
 div.side-panel {
   background-color: #ffe581;
-  padding: 64px 128px;
   border-left: 3px solid;
   text-align: center;
   height: calc(100vh - 181px);
@@ -125,7 +125,7 @@ div.side-panel {
 }
 
 div.empty-book {
-  margin-top: 164px;
+  margin-top: 220px;
 }
 
 .main-container {
