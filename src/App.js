@@ -65,7 +65,7 @@ class App extends Component {
           </h1>
         </header>
         <Search searchTerm={searchTerm} handleSearchTerm={this.handleSearchTerm} />
-        <section className="main-container">
+        <div className="main-container">
           <div className={selectedBook ? 'books-container inactive' : 'books-container active'}>
             {this.filterBooks().map((book) => (
               <Book key={book.id} book={book} pickBook={this.pickBook} />
@@ -76,7 +76,7 @@ class App extends Component {
           ) : (
             <EmptyPanel />
           )}
-        </section>
+        </div>
       </main>
     )
   }
