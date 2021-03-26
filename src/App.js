@@ -1,9 +1,9 @@
 import React, {Component} from 'react'
 import './App.css'
 import Book from './components/Book.jsx'
-import DetailPanel from './components/DetailPanel.jsx'
-import EmptyPanel from './components/EmptyPanel.jsx'
-import Search from './components/Search.jsx'
+// import DetailPanel from './components/DetailPanel.jsx'
+// import EmptyPanel from './components/EmptyPanel.jsx'
+// import Search from './components/Search.jsx'
 import {ReactComponent as Logo} from './assets/logo.svg'
 
 class App extends Component {
@@ -53,7 +53,7 @@ class App extends Component {
   }
 
   render() {
-    const {selectedBook, searchTerm} = this.state
+    const {selectedBook} = this.state
 
     return (
       <main>
@@ -64,18 +64,18 @@ class App extends Component {
             </a>
           </h1>
         </header>
-        <Search searchTerm={searchTerm} handleSearchTerm={this.handleSearchTerm} />
+        {/* <Search searchTerm={searchTerm} handleSearchTerm={this.handleSearchTerm} /> */}
         <div className="main-container">
           <div className={selectedBook ? 'books-container inactive' : 'books-container active'}>
             {this.filterBooks().map((book) => (
               <Book key={book.id} book={book} pickBook={this.pickBook} />
             ))}
           </div>
-          {selectedBook ? (
+          {/* {selectedBook ? (
             <DetailPanel book={selectedBook} closePanel={this.closePanel} />
           ) : (
             <EmptyPanel />
-          )}
+          )} */}
         </div>
       </main>
     )

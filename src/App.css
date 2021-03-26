@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&family=Work+Sans:wght@600&display=swap');
-
 body {
   font-family: 'Work Sans', sans-serif;
   margin: 0;
+  padding: 0;
   -webkit-font-smoothing: antialised;
   text-rendering: optimizeLegibility;
 }
@@ -87,10 +86,6 @@ div.book-info {
   margin: auto;
 }
 
-article.book:last-child {
-  padding-bottom: 100px;
-}
-
 header {
   background-color: #ffbccc;
   padding: 20px;
@@ -98,18 +93,11 @@ header {
   border-bottom: 3px solid black;
 }
 
-div.books-container,
-div.side-panel {
-  overflow: scroll;
-}
-
 div.books-container {
-  height: calc(100vh - 198px);
   background-color: #a7e1f8;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-row-gap: 32px;
   padding: 32px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 div.side-panel {
@@ -117,20 +105,6 @@ div.side-panel {
   border-left: 3px solid;
   text-align: center;
   height: calc(100vh - 181px);
-}
-
-.empty {
-  font-size: 20px;
-  text-align: center;
-}
-
-div.empty-book {
-  margin-top: 220px;
-}
-
-.main-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
 }
 
 .search,
