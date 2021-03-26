@@ -6,7 +6,7 @@ const Header = () => (
   <HeaderContainer>
     <H1>
       <a href="/">
-        <Logo alt="Graphic logo for SuperHi's Book Club" className="logo" />
+        <Logo alt="Graphic logo for SuperHi's Book Club" />
       </a>
     </H1>
   </HeaderContainer>

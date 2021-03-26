@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   background-color: #a7e1f8;
-  padding: 40px;
+  padding: 100px 40px;
 `
 
 export const BookList = styled.div`

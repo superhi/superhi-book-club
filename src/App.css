@@ -21,10 +21,6 @@ p.date.featured {
   margin-bottom: 200px;
 }
 
-img {
-  object-fit: cover;
-}
-
 svg.hand {
   width: 52px;
   margin-bottom: 16px;
@@ -36,24 +32,9 @@ img.book.featured {
   margin-top: 100px;
 }
 
-svg.icon {
-  position: fixed;
-  height: 44px;
-  right: 44px;
-  top: 124px;
-  cursor: pointer;
-}
-
 div.book-info {
   width: 388px;
   margin: auto;
-}
-
-div.side-panel {
-  background-color: #ffe581;
-  border-left: 3px solid;
-  text-align: center;
-  height: calc(100vh - 181px);
 }
 
 .search,

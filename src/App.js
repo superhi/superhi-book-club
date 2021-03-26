@@ -3,7 +3,7 @@ import './App.css'
 import {GlobalStyle} from './styles'
 import BooksContainer from './components/BooksContainer'
 import Header from './components/Header'
-// import EmptyPanel from './components/EmptyPanel.jsx'
+import DetailPanel from './components/DetailPanel'
 // import Search from './components/Search.jsx'
 
 class App extends Component {
@@ -53,17 +53,15 @@ class App extends Component {
   }
 
   render() {
+    const {selectedBook} = this.state
+
     return (
       <main>
         <GlobalStyle />
         <Header />
         {/* <Search searchTerm={searchTerm} handleSearchTerm={this.handleSearchTerm} /> */}
         <BooksContainer books={this.filterBooks()} pickBook={this.pickBook} />
-        {/* {selectedBook ? (
-            <DetailPanel book={selectedBook} closePanel={this.closePanel} />
-          ) : (
-            <EmptyPanel />
-          )} */}
+        {selectedBook && <DetailPanel book={selectedBook} closePanel={this.closePanel} />}
       </main>
     )
   }
