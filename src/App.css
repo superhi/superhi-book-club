@@ -23,14 +23,12 @@ p {
   margin: 10px 0;
 }
 
-.author,
 .description,
 .date {
   font-family: 'Libre Baskerville', serif;
   text-align: left;
 }
 
-.author,
 .date {
   font-style: italic;
 }
