@@ -1,4 +1,5 @@
 import React from 'react'
+import {BookCover} from './styles'
 
 const Book = ({book, pickBook}) => {
   const handleClick = () => {
@@ -6,13 +7,11 @@ const Book = ({book, pickBook}) => {
   }
 
   return (
-    <article className="book">
-      <p>{book.id}</p>
-      <img
+    <article>
+      <BookCover
         src={book.image}
         alt={`Book cover for ${book.title} by ${book.author}`}
         onClick={handleClick}
-        className="book list"
       />
       <h3>{book.title}</h3>
       <p className="author">by {book.author}</p>

@@ -39,17 +39,8 @@ p.date.featured {
   margin-bottom: 200px;
 }
 
-article.book {
-  padding-right: 30px;
-}
-
 img {
   object-fit: cover;
-}
-
-img.book {
-  filter: grayscale(100%);
-  border: 3px solid black;
 }
 
 svg.logo {
@@ -59,12 +50,6 @@ svg.logo {
 svg.hand {
   width: 52px;
   margin-bottom: 16px;
-}
-
-img.book.list {
-  width: 173px;
-  height: 233px;
-  cursor: pointer;
 }
 
 img.book.featured {
@@ -91,13 +76,6 @@ header {
   padding: 20px;
   text-align: center;
   border-bottom: 3px solid black;
-}
-
-div.books-container {
-  background-color: #a7e1f8;
-  padding: 32px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
 }
 
 div.side-panel {
