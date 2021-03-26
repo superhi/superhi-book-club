@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import './App.css'
-import Book from './components/Book.jsx'
-// import DetailPanel from './components/DetailPanel.jsx'
+import BooksContainer from './components/BooksContainer'
 // import EmptyPanel from './components/EmptyPanel.jsx'
 // import Search from './components/Search.jsx'
 import {ReactComponent as Logo} from './assets/logo.svg'
@@ -53,8 +52,6 @@ class App extends Component {
   }
 
   render() {
-    const {selectedBook} = this.state
-
     return (
       <main>
         <header>
@@ -65,18 +62,12 @@ class App extends Component {
           </h1>
         </header>
         {/* <Search searchTerm={searchTerm} handleSearchTerm={this.handleSearchTerm} /> */}
-        <div className="main-container">
-          <div className={selectedBook ? 'books-container inactive' : 'books-container active'}>
-            {this.filterBooks().map((book) => (
-              <Book key={book.id} book={book} pickBook={this.pickBook} />
-            ))}
-          </div>
-          {/* {selectedBook ? (
+        <BooksContainer books={this.filterBooks()} pickBook={this.pickBook} />
+        {/* {selectedBook ? (
             <DetailPanel book={selectedBook} closePanel={this.closePanel} />
           ) : (
             <EmptyPanel />
           )} */}
-        </div>
       </main>
     )
   }
