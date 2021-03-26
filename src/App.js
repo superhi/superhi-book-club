@@ -1,9 +1,10 @@
 import React, {Component} from 'react'
 import './App.css'
+import {GlobalStyle} from './styles'
 import BooksContainer from './components/BooksContainer'
+import Header from './components/Header'
 // import EmptyPanel from './components/EmptyPanel.jsx'
 // import Search from './components/Search.jsx'
-import {ReactComponent as Logo} from './assets/logo.svg'
 
 class App extends Component {
   state = {
@@ -54,13 +55,8 @@ class App extends Component {
   render() {
     return (
       <main>
-        <header>
-          <h1>
-            <a href="/">
-              <Logo alt="Graphic logo for SuperHi's Book Club" className="logo" />
-            </a>
-          </h1>
-        </header>
+        <GlobalStyle />
+        <Header />
         {/* <Search searchTerm={searchTerm} handleSearchTerm={this.handleSearchTerm} /> */}
         <BooksContainer books={this.filterBooks()} pickBook={this.pickBook} />
         {/* {selectedBook ? (

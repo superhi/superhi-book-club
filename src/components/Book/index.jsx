@@ -1,5 +1,5 @@
 import React from 'react'
-import {Container, BookCover} from './styles'
+import {Container, BookCover, BookTitle} from './styles'
 import {Author} from '../../styles'
 
 const Book = ({book, pickBook}) => {
@@ -14,7 +14,7 @@ const Book = ({book, pickBook}) => {
         alt={`Book cover for ${book.title} by ${book.author}`}
         onClick={handleClick}
       />
-      <h3>{book.title}</h3>
+      <BookTitle>{book.title}</BookTitle>
       <Author>by {book.author}</Author>
     </Container>
   )
