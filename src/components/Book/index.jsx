@@ -1,6 +1,6 @@
 import React from 'react'
-import {Container, BookCover, BookTitle} from './styles'
-import {Author} from '../../styles'
+import {Container, BookTitle} from './styles'
+import {Author, BookCover} from '../../styles'
 
 const Book = ({book, pickBook}) => {
   const handleClick = () => {
