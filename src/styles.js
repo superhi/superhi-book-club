@@ -43,6 +43,11 @@ export const BookCover = styled.img`
   height: 417px;
   cursor: pointer;
 
+  @media (max-width: 1350px) {
+    height: 350px;
+    width: 100%;
+  }
+
   @media (max-width: 800px) {
     width: 150px;
     height: 210px;
