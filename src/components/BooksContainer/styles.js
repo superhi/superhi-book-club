@@ -5,7 +5,7 @@ export const Container = styled.div`
   padding: 160px 40px;
 
   @media (max-width: 800px) {
-    padding: 114px 20px 60px 20px;
+    padding: 114px 20px;
   }
 `
 
@@ -18,11 +18,11 @@ export const BookList = styled.div`
 
   @media (max-width: 1200px) {
     grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 60px;
   }
 
   @media (max-width: 600px) {
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 20px;
-    grid-row-gap: 60px;
   }
 `

@@ -27,6 +27,7 @@ export const ItalicP = styled.p`
   font-family: 'Libre Baskerville', serif;
   font-style: italic;
   font-size: 16px;
+  margin: 8px 0;
 `
 
 export const P = styled.p`

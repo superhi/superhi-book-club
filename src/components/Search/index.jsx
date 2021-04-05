@@ -38,7 +38,7 @@ const Search = ({searchTerm, handleSearchTerm}) => {
       </Desktop>
 
       <Mobile>
-        <SearchContainer style={{width: '80%'}}>
+        <SearchContainer>
           <Icon />
           <CloseButton onClick={() => handleSearchTerm('')} />
           <Input

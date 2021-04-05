@@ -16,19 +16,20 @@ export const SearchContainer = styled.div`
   transition: 0.3s;
   z-index: 3;
 
-  @media (max-width: 600px) {
+  @media (max-width: 800px) {
+    position: absolute;
     bottom: 12px;
     left: 22px;
     top: unset;
     right: unset;
-    width: 80%;
+    width: 85%;
   }
 `
 
 export const Desktop = styled.div`
   display: block;
 
-  @media (max-width: 600px) {
+  @media (max-width: 800px) {
     display: none;
   }
 `
@@ -36,7 +37,7 @@ export const Desktop = styled.div`
 export const Mobile = styled.div`
   display: none;
 
-  @media (max-width: 600px) {
+  @media (max-width: 800px) {
     display: block;
     background: #ffbccc;
     height: 64px;
