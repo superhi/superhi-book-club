@@ -3,6 +3,7 @@ import {GlobalStyle} from './styles'
 import BooksContainer from './components/BooksContainer'
 import Header from './components/Header'
 import DetailPanel from './components/DetailPanel'
+import Search from './components/Search'
 
 class App extends Component {
   state = {
@@ -56,7 +57,8 @@ class App extends Component {
     return (
       <main>
         <GlobalStyle />
-        <Header handleSearchTerm={this.handleSearchTerm} searchTerm={searchTerm} />
+        <Search handleSearchTerm={this.handleSearchTerm} searchTerm={searchTerm} />
+        <Header />
         <BooksContainer
           books={this.filterBooks()}
           pickBook={this.pickBook}

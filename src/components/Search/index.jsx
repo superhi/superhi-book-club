@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {Input, SearchContainer, Icon, CloseButton} from './styles'
+import {Input, SearchContainer, Icon, CloseButton, Mobile, Desktop} from './styles'
 
 const Search = ({searchTerm, handleSearchTerm}) => {
   const [searchDisplay, setSearchDisplay] = useState(false)
@@ -19,21 +19,37 @@ const Search = ({searchTerm, handleSearchTerm}) => {
 
   return (
     <>
-      <SearchContainer style={{width: searchDisplay === true ? '500px' : '20px'}}>
-        <Icon onClick={handleClick} />
-        {searchDisplay === true && (
-          <>
-            <CloseButton onClick={clearSearch} />
-            <Input
-              type="text"
-              name="search"
-              value={searchTerm}
-              onChange={handleChange}
-              autoComplete="off"
-            />
-          </>
-        )}
-      </SearchContainer>
+      <Desktop>
+        <SearchContainer style={{width: searchDisplay === true ? '500px' : '20px'}}>
+          <Icon onClick={handleClick} />
+          {searchDisplay === true && (
+            <>
+              <CloseButton onClick={clearSearch} />
+              <Input
+                type="text"
+                name="search"
+                value={searchTerm}
+                onChange={handleChange}
+                autoComplete="off"
+              />
+            </>
+          )}
+        </SearchContainer>
+      </Desktop>
+
+      <Mobile>
+        <SearchContainer style={{width: '80%'}}>
+          <Icon />
+          <CloseButton onClick={() => handleSearchTerm('')} />
+          <Input
+            type="text"
+            name="search"
+            value={searchTerm}
+            onChange={handleChange}
+            autoComplete="off"
+          />
+        </SearchContainer>
+      </Mobile>
     </>
   )
 }

@@ -8,12 +8,43 @@ export const SearchContainer = styled.div`
   height: 20px;
   background: #a7e1f8;
   padding: 8px;
-  right: 0;
-  position: absolute;
-  margin-right: 22px;
+  right: 22px;
+  top: 16px;
+  position: fixed;
   display: flex;
   align-items: center;
   transition: 0.3s;
+  z-index: 3;
+
+  @media (max-width: 600px) {
+    bottom: 12px;
+    left: 22px;
+    top: unset;
+    right: unset;
+    width: 80%;
+  }
+`
+
+export const Desktop = styled.div`
+  display: block;
+
+  @media (max-width: 600px) {
+    display: none;
+  }
+`
+
+export const Mobile = styled.div`
+  display: none;
+
+  @media (max-width: 600px) {
+    display: block;
+    background: #ffbccc;
+    height: 64px;
+    width: 100vw;
+    bottom: 0;
+    position: fixed;
+    z-index: 2;
+  }
 `
 
 export const Input = styled.input`
