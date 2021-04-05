@@ -57,7 +57,11 @@ class App extends Component {
       <main>
         <GlobalStyle />
         <Header handleSearchTerm={this.handleSearchTerm} searchTerm={searchTerm} />
-        <BooksContainer books={this.filterBooks()} pickBook={this.pickBook} />
+        <BooksContainer
+          books={this.filterBooks()}
+          pickBook={this.pickBook}
+          title={searchTerm === '' ? 'All books' : 'Search results'}
+        />
         {selectedBook && <DetailPanel book={selectedBook} closePanel={this.closePanel} />}
       </main>
     )
