@@ -1,5 +1,6 @@
 import styled from 'styled-components'
-import {BookCover, CloseButton, P} from '../../styles'
+import {ReactComponent as CloseIcon} from '../../assets/close-button.svg'
+import {BookCover, P} from '../../styles'
 
 export const Panel = styled.div`
   background-color: #ffe581;
@@ -14,7 +15,10 @@ export const Panel = styled.div`
   overflow: scroll;
 `
 
-export const Close = styled(CloseButton)`
+export const CloseButton = styled(CloseIcon)`
+  height: 44px;
+  right: 22px;
+  cursor: pointer;
   position: fixed;
   top: 124px;
   z-index: 3;

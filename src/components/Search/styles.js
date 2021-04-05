@@ -3,11 +3,11 @@ import {ReactComponent as MagnifyingIcon} from '../../assets/search.svg'
 import {ReactComponent as CloseIcon} from '../../assets/icon-exit.svg'
 
 export const SearchContainer = styled.div`
-  border: 3px solid black;
+  border: 2px solid black;
   border-radius: 30px;
   height: 20px;
   background: #a7e1f8;
-  padding: 12px;
+  padding: 8px;
   right: 0;
   position: absolute;
   margin-right: 22px;
@@ -23,7 +23,7 @@ export const Input = styled.input`
   width: 80%;
   background: inherit;
   border: none;
-  padding: 8px;
+  padding: 6px;
 `
 
 export const Icon = styled(MagnifyingIcon)`

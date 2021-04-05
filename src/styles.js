@@ -1,5 +1,4 @@
 import styled, {createGlobalStyle} from 'styled-components'
-import {ReactComponent as CloseIcon} from './assets/close-button.svg'
 
 export const GlobalStyle = createGlobalStyle`
   body {
@@ -38,11 +37,5 @@ export const BookCover = styled.img`
   object-fit: cover;
   width: 300px;
   height: 417px;
-  cursor: pointer;
-`
-
-export const CloseButton = styled(CloseIcon)`
-  height: 44px;
-  right: 44px;
   cursor: pointer;
 `
