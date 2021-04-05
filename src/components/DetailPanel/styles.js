@@ -4,7 +4,7 @@ import {BookCover} from '../../styles'
 
 export const Panel = styled.div`
   background-color: #ffe581;
-  border-left: 3px solid;
+  border-left: 2px solid;
   height: 100vh;
   width: 600px;
   position: fixed;
@@ -12,6 +12,7 @@ export const Panel = styled.div`
   right: 0;
   top: 83px;
   padding: 90px 60px;
+  overflow: scroll;
 `
 
 export const CloseButton = styled(CloseIcon)`

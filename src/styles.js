@@ -27,7 +27,7 @@ export const Author = styled.p`
 
 export const BookCover = styled.img`
   filter: grayscale(100%);
-  border: 3px solid black;
+  border: 2px solid black;
   object-fit: cover;
   width: 300px;
   height: 417px;
