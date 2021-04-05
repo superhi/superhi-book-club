@@ -15,8 +15,8 @@ export const Panel = styled.div`
   overflow: scroll;
 
   @media (max-width: 800px) {
-    width: 100vw;
-    height: 100vh;
+    width: calc(100vw - 44px);
+    height: calc(100vh - 200px);
     right: unset;
     padding: 100px 20px;
     z-index: 2;
@@ -30,6 +30,12 @@ export const CloseButton = styled(CloseIcon)`
   position: fixed;
   top: 124px;
   z-index: 3;
+
+  @media (max-width: 800px) {
+    top: unset;
+    right: 12px;
+    bottom: 12px;
+  }
 `
 
 export const FeaturedBookCover = styled(BookCover)`
