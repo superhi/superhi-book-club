@@ -27,6 +27,7 @@ export const ItalicP = styled.p`
   font-family: 'Libre Baskerville', serif;
   font-style: italic;
   font-size: 16px;
+  margin: 8px 0;
 `
 
 export const P = styled.p`
@@ -48,8 +49,8 @@ export const BookCover = styled.img`
     width: 100%;
   }
 
-  @media (max-width: 800px) {
-    width: 150px;
-    height: 210px;
+  @media (max-width: 600px) {
+    width: 100%;
+    height: 300px;
   }
 `
