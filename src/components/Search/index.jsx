@@ -1,7 +1,7 @@
 import React from 'react'
 import {Input, SearchContainer, Icon, CloseButton} from './styles'
 
-const Search = ({searchTerm, handleSearchTerm, clearSearch}) => {
+const Search = ({searchTerm, handleSearchTerm}) => {
   const handleChange = (event) => {
     handleSearchTerm(event.target.value)
   }
@@ -11,7 +11,7 @@ const Search = ({searchTerm, handleSearchTerm, clearSearch}) => {
   return (
     <SearchContainer>
       <Icon />
-      <CloseButton onClick={clearSearch} />
+      <CloseButton onClick={() => handleSearchTerm('')} />
       <Input
         type="text"
         name="search"

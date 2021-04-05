@@ -35,12 +35,6 @@ class App extends Component {
     })
   }
 
-  clearSearch = () => {
-    this.setState({
-      searchTerm: '',
-    })
-  }
-
   filterBooks = () => {
     const {searchTerm, books} = this.state
 
@@ -62,11 +56,7 @@ class App extends Component {
     return (
       <main>
         <GlobalStyle />
-        <Header
-          handleSearchTerm={this.handleSearchTerm}
-          clearSearch={this.clearSearch}
-          searchTerm={searchTerm}
-        />
+        <Header handleSearchTerm={this.handleSearchTerm} searchTerm={searchTerm} />
         <BooksContainer books={this.filterBooks()} pickBook={this.pickBook} />
         {selectedBook && <DetailPanel book={selectedBook} closePanel={this.closePanel} />}
       </main>
