@@ -4,13 +4,13 @@ import {BookCover, CloseButton} from '../../styles'
 export const Panel = styled.div`
   background-color: #ffe581;
   border-left: 2px solid;
-  height: 100vh;
+  height: calc(100vh - 200px);
   width: 600px;
   position: fixed;
   z-index: 1;
   right: 0;
-  top: 83px;
-  padding: 90px 60px;
+  top: 0;
+  padding: 150px 60px 60px 60px;
   overflow: scroll;
 `
 

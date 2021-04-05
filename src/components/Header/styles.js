@@ -7,7 +7,7 @@ export const HeaderContainer = styled.header`
   padding: 20px;
   border-bottom: 2px solid black;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   width: 100vw;
   display: flex;
   box-sizing: border-box;
