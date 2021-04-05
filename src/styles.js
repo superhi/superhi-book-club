@@ -49,8 +49,8 @@ export const BookCover = styled.img`
     width: 100%;
   }
 
-  @media (max-width: 800px) {
-    width: 150px;
-    height: 210px;
+  @media (max-width: 600px) {
+    width: 100%;
+    height: 300px;
   }
 `
