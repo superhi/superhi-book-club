@@ -17,6 +17,7 @@ export const Panel = styled.div`
 export const Close = styled(CloseButton)`
   position: fixed;
   top: 124px;
+  z-index: 3;
 `
 
 export const FeaturedBookCover = styled(BookCover)`

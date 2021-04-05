@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import './App.css'
 import {GlobalStyle} from './styles'
 import BooksContainer from './components/BooksContainer'
 import Header from './components/Header'
@@ -58,12 +57,16 @@ class App extends Component {
   }
 
   render() {
-    const {selectedBook} = this.state
+    const {selectedBook, searchTerm} = this.state
 
     return (
       <main>
         <GlobalStyle />
-        <Header handleSearchTerm={this.handleSearchTerm} clearSearch={this.clearSearch} />
+        <Header
+          handleSearchTerm={this.handleSearchTerm}
+          clearSearch={this.clearSearch}
+          searchTerm={searchTerm}
+        />
         <BooksContainer books={this.filterBooks()} pickBook={this.pickBook} />
         {selectedBook && <DetailPanel book={selectedBook} closePanel={this.closePanel} />}
       </main>

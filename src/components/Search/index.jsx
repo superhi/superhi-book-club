@@ -6,6 +6,8 @@ const Search = ({searchTerm, handleSearchTerm, clearSearch}) => {
     handleSearchTerm(event.target.value)
   }
 
+  console.log(searchTerm)
+
   return (
     <SearchContainer>
       <Icon />
