@@ -37,22 +37,6 @@ div.book-info {
   margin: auto;
 }
 
-.search {
-  padding: 16px;
-  display: flex;
-  align-items: center;
-  border-top: 3px solid black;
-  bottom: 0;
-  position: fixed;
-  width: 100%;
-  z-index: 100;
-}
-
-label {
-  margin-right: 20px;
-  width: 120px;
-}
-
 /* mobile responsive styles */
 /* 
 @media (max-width: 1200px) {

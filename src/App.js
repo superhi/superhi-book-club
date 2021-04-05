@@ -4,7 +4,6 @@ import {GlobalStyle} from './styles'
 import BooksContainer from './components/BooksContainer'
 import Header from './components/Header'
 import DetailPanel from './components/DetailPanel'
-// import Search from './components/Search.jsx'
 
 class App extends Component {
   state = {
@@ -37,6 +36,12 @@ class App extends Component {
     })
   }
 
+  clearSearch = () => {
+    this.setState({
+      searchTerm: '',
+    })
+  }
+
   filterBooks = () => {
     const {searchTerm, books} = this.state
 
@@ -58,8 +63,7 @@ class App extends Component {
     return (
       <main>
         <GlobalStyle />
-        <Header />
-        {/* <Search searchTerm={searchTerm} handleSearchTerm={this.handleSearchTerm} /> */}
+        <Header handleSearchTerm={this.handleSearchTerm} clearSearch={this.clearSearch} />
         <BooksContainer books={this.filterBooks()} pickBook={this.pickBook} />
         {selectedBook && <DetailPanel book={selectedBook} closePanel={this.closePanel} />}
       </main>

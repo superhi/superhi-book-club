@@ -1,19 +1,23 @@
 import React from 'react'
-import {SearchInput} from './styles'
+import {Input, SearchContainer, Icon, CloseButton} from './styles'
 
-const Search = ({searchTerm, handleSearchTerm}) => {
+const Search = ({searchTerm, handleSearchTerm, clearSearch}) => {
   const handleChange = (event) => {
     handleSearchTerm(event.target.value)
   }
 
   return (
-    <SearchInput
-      type="text"
-      name="search"
-      value={searchTerm}
-      onChange={handleChange}
-      autoComplete="off"
-    />
+    <SearchContainer>
+      <Icon />
+      <CloseButton onClick={clearSearch} />
+      <Input
+        type="text"
+        name="search"
+        value={searchTerm}
+        onChange={handleChange}
+        autoComplete="off"
+      />
+    </SearchContainer>
   )
 }
 
