@@ -12,13 +12,18 @@ const Search = ({searchTerm, handleSearchTerm}) => {
     setSearchDisplay((searchDisplay) => !searchDisplay)
   }
 
+  const clearSearch = () => {
+    handleSearchTerm('')
+    setSearchDisplay(false)
+  }
+
   return (
     <>
-      <SearchContainer style={{width: searchDisplay === true ? '500px' : '16px'}}>
+      <SearchContainer style={{width: searchDisplay === true ? '500px' : '20px'}}>
         <Icon onClick={handleClick} />
         {searchDisplay === true && (
           <>
-            <CloseButton onClick={() => handleSearchTerm('')} />
+            <CloseButton onClick={clearSearch} />
             <Input
               type="text"
               name="search"
