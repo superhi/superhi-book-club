@@ -7,4 +7,8 @@ export const Container = styled.div`
 export const BookTitle = styled.h3`
   font-size: 28px;
   font-family: 'Work Sans', sans-serif;
+
+  @media (max-width: 800px) {
+    font-size: 22px;
+  }
 `

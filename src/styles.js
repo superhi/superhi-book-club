@@ -17,6 +17,10 @@ export const H1 = styled.h1`
 export const H2 = styled.h2`
   font-size: 42px;
   margin: 0;
+
+  @media (max-width: 800px) {
+    font-size: 32px;
+  }
 `
 
 export const ItalicP = styled.p`
@@ -38,4 +42,9 @@ export const BookCover = styled.img`
   width: 300px;
   height: 417px;
   cursor: pointer;
+
+  @media (max-width: 800px) {
+    width: 150px;
+    height: 210px;
+  }
 `
