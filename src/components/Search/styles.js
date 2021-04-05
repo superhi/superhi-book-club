@@ -14,7 +14,7 @@ export const SearchContainer = styled.div`
   display: flex;
   align-items: center;
   transition: 0.3s;
-  z-index: 3;
+  z-index: 4;
 
   @media (max-width: 800px) {
     position: absolute;
@@ -23,6 +23,7 @@ export const SearchContainer = styled.div`
     top: unset;
     right: unset;
     width: 85%;
+    z-index: 1;
   }
 `
 

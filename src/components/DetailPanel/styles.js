@@ -4,7 +4,7 @@ import {BookCover, P} from '../../styles'
 
 export const Panel = styled.div`
   background-color: #ffe581;
-  border-left: 2px solid;
+  border: 2px solid #000;
   height: calc(100vh - 270px);
   width: 440px;
   position: fixed;
@@ -13,6 +13,14 @@ export const Panel = styled.div`
   top: 0;
   padding: 150px 60px 120px 60px;
   overflow: scroll;
+
+  @media (max-width: 800px) {
+    width: 100vw;
+    height: 100vh;
+    right: unset;
+    padding: 100px 20px;
+    z-index: 2;
+  }
 `
 
 export const CloseButton = styled(CloseIcon)`
@@ -28,6 +36,12 @@ export const FeaturedBookCover = styled(BookCover)`
   width: 100%;
   height: 572px;
   margin: 30px 0;
+  cursor: default;
+
+  @media (max-width: 800px) {
+    height: 450px;
+    width: 335px;
+  }
 `
 
 export const StyledP = styled(P)`
