@@ -6,20 +6,24 @@ const Search = ({searchTerm, handleSearchTerm}) => {
     handleSearchTerm(event.target.value)
   }
 
-  console.log(searchTerm)
-
   return (
-    <SearchContainer>
-      <Icon />
-      <CloseButton onClick={() => handleSearchTerm('')} />
-      <Input
-        type="text"
-        name="search"
-        value={searchTerm}
-        onChange={handleChange}
-        autoComplete="off"
-      />
-    </SearchContainer>
+    <>
+      {searchTerm === '' ? (
+        <>hello world</>
+      ) : (
+        <SearchContainer>
+          <Icon />
+          <CloseButton onClick={() => handleSearchTerm('')} />
+          <Input
+            type="text"
+            name="search"
+            value={searchTerm}
+            onChange={handleChange}
+            autoComplete="off"
+          />
+        </SearchContainer>
+      )}
+    </>
   )
 }
 
