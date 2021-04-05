@@ -20,9 +20,14 @@ export const H2 = styled.h2`
   margin: 0;
 `
 
-export const Author = styled.p`
+export const ItalicP = styled.p`
   font-family: 'Libre Baskerville', serif;
   font-style: italic;
+  font-size: 16px;
+`
+
+export const P = styled.p`
+  font-family: 'Libre Baskerville', serif;
   font-size: 16px;
 `
 

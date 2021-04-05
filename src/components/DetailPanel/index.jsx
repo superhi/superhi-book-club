@@ -1,16 +1,15 @@
 import React from 'react'
 import {Close, Panel, FeaturedBookCover} from './styles'
-import {H2, Author} from '../../styles'
-
+import {H2, ItalicP, P} from '../../styles'
 const DetailPanel = ({book, closePanel}) => {
   return (
     <Panel>
       <Close onClick={closePanel} />
       <H2>{book.title}</H2>
-      <Author>by {book.author}</Author>
+      <ItalicP>by {book.author}</ItalicP>
       <FeaturedBookCover src={book.image} alt={`Book cover for ${book.title} by ${book.author}`} />
-      <p>{book.description}</p>
-      <p>Published in {book.published}</p>
+      <P>{book.description}</P>
+      <ItalicP>Published in {book.published}</ItalicP>
     </Panel>
   )
 }

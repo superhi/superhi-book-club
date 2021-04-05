@@ -1,6 +1,6 @@
 import React from 'react'
 import {Container, BookTitle} from './styles'
-import {Author, BookCover} from '../../styles'
+import {ItalicP, BookCover} from '../../styles'
 
 const Book = ({book, pickBook}) => {
   const handleClick = () => {
@@ -15,7 +15,7 @@ const Book = ({book, pickBook}) => {
         onClick={handleClick}
       />
       <BookTitle>{book.title}</BookTitle>
-      <Author>by {book.author}</Author>
+      <ItalicP>by {book.author}</ItalicP>
     </Container>
   )
 }
