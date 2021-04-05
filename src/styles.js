@@ -29,6 +29,7 @@ export const ItalicP = styled.p`
 export const P = styled.p`
   font-family: 'Libre Baskerville', serif;
   font-size: 16px;
+  line-height: 1.6;
 `
 
 export const BookCover = styled.img`
