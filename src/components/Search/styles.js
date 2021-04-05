@@ -5,7 +5,7 @@ import {ReactComponent as CloseIcon} from '../../assets/icon-exit.svg'
 export const SearchContainer = styled.div`
   border: 3px solid black;
   border-radius: 30px;
-  width: 500px;
+  /* width: 500px; */
   height: 16px;
   background: #a7e1f8;
   padding: 12px;
@@ -28,6 +28,7 @@ export const Input = styled.input`
 
 export const Icon = styled(MagnifyingIcon)`
   width: 20px;
+  height: 20px;
 `
 
 export const CloseButton = styled(CloseIcon)`
@@ -35,3 +36,5 @@ export const CloseButton = styled(CloseIcon)`
   position: absolute;
   cursor: pointer;
 `
+
+export const IconContainer = styled.div``
