@@ -18,7 +18,7 @@ export const Panel = styled.div`
     width: calc(100vw - 44px);
     height: calc(100vh - 200px);
     right: unset;
-    padding: 100px 20px;
+    padding: 120px 20px;
     z-index: 2;
   }
 `
@@ -41,7 +41,7 @@ export const CloseButton = styled(CloseIcon)`
 export const FeaturedBookCover = styled(BookCover)`
   width: 100%;
   height: 572px;
-  margin: 30px 0;
+  margin-top: 30px;
   cursor: default;
 
   @media (max-width: 800px) {
@@ -51,5 +51,5 @@ export const FeaturedBookCover = styled(BookCover)`
 `
 
 export const StyledP = styled(P)`
-  margin-bottom: 30px;
+  margin: 30px 0;
 `
