@@ -53,4 +53,8 @@ export const BookCover = styled.img`
     width: 100%;
     height: 300px;
   }
+
+  @media (max-width: 400px) {
+    height: 224px;
+  }
 `

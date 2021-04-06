@@ -10,3 +10,7 @@ export const BookTitle = styled.h3`
     margin: 8px 0;
   }
 `
+
+export const Container = styled.figure`
+  margin: 0;
+`

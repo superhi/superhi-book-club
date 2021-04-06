@@ -33,8 +33,8 @@ export const CloseButton = styled(CloseIcon)`
 
   @media (max-width: 800px) {
     top: unset;
-    right: 12px;
-    bottom: 12px;
+    right: 32px;
+    bottom: 32px;
   }
 `
 
