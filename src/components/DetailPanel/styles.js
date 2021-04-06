@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import {ReactComponent as CloseIcon} from '../../assets/close-button.svg'
 import {BookCover, P} from '../../styles'
 
-export const Panel = styled.div`
+export const Panel = styled.article`
   background-color: #ffe581;
   border: 2px solid #000;
   height: calc(100vh - 270px);
