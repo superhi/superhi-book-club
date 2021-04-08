@@ -63,6 +63,7 @@ class App extends Component {
           books={this.filterBooks()}
           pickBook={this.pickBook}
           title={searchTerm === '' ? 'All books' : 'Search results'}
+          $isPanelOpen={selectedBook}
         />
         {selectedBook && <DetailPanel book={selectedBook} closePanel={this.closePanel} />}
       </main>

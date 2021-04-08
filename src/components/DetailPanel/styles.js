@@ -46,3 +46,13 @@ export const FeaturedBookCover = styled(BookCover)`
 export const StyledP = styled(P)`
   margin: 30px 0;
 `
+
+export const BG = styled.div`
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  z-index: 1;
+`

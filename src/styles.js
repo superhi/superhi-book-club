@@ -41,6 +41,6 @@ export const BookCover = styled.img`
   border: 2px solid black;
   object-fit: cover;
   cursor: pointer;
-  aspect-ratio: 1 / 1.5;
+  aspect-ratio: 3 / 4;
   width: 100%;
 `
