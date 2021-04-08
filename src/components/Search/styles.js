@@ -16,7 +16,7 @@ export const SearchContainer = styled.div`
   transition: 0.3s;
   z-index: 4;
 
-  @media (max-width: 800px) {
+  @media (max-width: 850px) {
     position: absolute;
     bottom: 12px;
     left: 22px;
@@ -30,7 +30,7 @@ export const SearchContainer = styled.div`
 export const Desktop = styled.div`
   display: block;
 
-  @media (max-width: 800px) {
+  @media (max-width: 850px) {
     display: none;
   }
 `
@@ -38,7 +38,7 @@ export const Desktop = styled.div`
 export const Mobile = styled.div`
   display: none;
 
-  @media (max-width: 800px) {
+  @media (max-width: 850px) {
     display: block;
     background: #ffbccc;
     height: 64px;
