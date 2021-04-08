@@ -16,7 +16,7 @@ export const Panel = styled.article`
 
   @media (max-width: 800px) {
     width: calc(100vw - 44px);
-    height: calc(100vh - 200px);
+    height: calc(100vh - 240px);
     right: unset;
     padding: 120px 20px;
     z-index: 2;

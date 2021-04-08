@@ -28,6 +28,7 @@ export const ItalicP = styled.p`
   font-style: italic;
   font-size: 16px;
   margin: 0;
+  line-height: 1.6;
 `
 
 export const P = styled.p`

@@ -9,7 +9,7 @@ export const SearchContainer = styled.div`
   background: #a7e1f8;
   padding: 8px;
   right: 22px;
-  top: 16px;
+  top: 20px;
   position: fixed;
   display: flex;
   align-items: center;
