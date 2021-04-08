@@ -20,7 +20,7 @@ const Search = ({searchTerm, handleSearchTerm}) => {
   return (
     <>
       <Desktop>
-        <SearchContainer style={{width: searchDisplay === true ? '500px' : '20px'}}>
+        <SearchContainer $isSearchOpen={searchDisplay}>
           <Icon onClick={handleClick} />
           {searchDisplay === true && (
             <>

@@ -15,6 +15,7 @@ export const SearchContainer = styled.div`
   align-items: center;
   transition: 0.3s;
   z-index: 4;
+  width: ${({$isSearchOpen}) => ($isSearchOpen ? '500px' : '20px')};
 
   @media (max-width: 850px) {
     position: absolute;
