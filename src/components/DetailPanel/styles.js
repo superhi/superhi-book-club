@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import {ReactComponent as CloseIcon} from '../../assets/close-button.svg'
-import {BookCover, P} from '../../styles'
+import {BookCover, P, ItalicP} from '../../styles'
 
 export const Panel = styled.article`
   background-color: #ffe581;
@@ -39,12 +39,16 @@ export const CloseButton = styled(CloseIcon)`
 `
 
 export const FeaturedBookCover = styled(BookCover)`
-  margin-top: 30px;
   cursor: default;
+  margin-bottom: 30px;
 `
 
 export const StyledP = styled(P)`
-  margin: 30px 0;
+  margin-bottom: 30px;
+`
+
+export const Author = styled(ItalicP)`
+  margin-bottom: 30px;
 `
 
 export const BG = styled.div`
