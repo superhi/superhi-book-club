@@ -39,15 +39,8 @@ export const CloseButton = styled(CloseIcon)`
 `
 
 export const FeaturedBookCover = styled(BookCover)`
-  width: 100%;
-  height: 572px;
   margin-top: 30px;
   cursor: default;
-
-  @media (max-width: 800px) {
-    height: 450px;
-    width: 335px;
-  }
 `
 
 export const StyledP = styled(P)`

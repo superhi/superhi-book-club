@@ -40,21 +40,7 @@ export const BookCover = styled.img`
   filter: grayscale(100%);
   border: 2px solid black;
   object-fit: cover;
-  width: 300px;
-  height: 417px;
   cursor: pointer;
-
-  @media (max-width: 1350px) {
-    height: 350px;
-    width: 100%;
-  }
-
-  @media (max-width: 600px) {
-    width: 100%;
-    height: 300px;
-  }
-
-  @media (max-width: 400px) {
-    height: 224px;
-  }
+  aspect-ratio: 1 / 1.5;
+  width: 100%;
 `
