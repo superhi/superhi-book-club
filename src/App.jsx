@@ -72,3 +72,69 @@ class App extends Component {
 }
 
 export default App
+
+////// hooks refactor //////
+
+// import React, {useState, useEffect} from 'react'
+// import {GlobalStyle} from './styles'
+// import BooksContainer from './components/BooksContainer'
+// import Header from './components/Header'
+// import DetailPanel from './components/DetailPanel'
+// import Search from './components/Search'
+
+// const App = () => {
+//   const [books, setBooks] = useState([])
+//   const [selectedBook, setSelectedBook] = useState(null)
+//   const [searchTerm, setSearchTerm] = useState('')
+
+//   useEffect(() => {
+//     const fetchData = async () => {
+//       const response = await fetch('https://book-club-json.herokuapp.com/books')
+//       const books = await response.json()
+//       setBooks(books)
+//     }
+
+//     fetchData()
+//   }, [])
+
+//   const pickBook = (book) => {
+//     setSelectedBook(book)
+//   }
+
+//   const closePanel = () => {
+//     setSelectedBook(null)
+//   }
+
+//   const handleSearchTerm = (input) => {
+//     setSearchTerm(input)
+//   }
+
+//   const filterBooks = () => {
+//     const stringSearch = (bookAttribute, searchTerm) =>
+//       bookAttribute.toLowerCase().includes(searchTerm.toLowerCase())
+
+//     if (searchTerm === '') {
+//       return books
+//     } else {
+//       return books.filter(
+//         (book) => stringSearch(book.title, searchTerm) || stringSearch(book.author, searchTerm)
+//       )
+//     }
+//   }
+
+//   return (
+//     <main>
+//       <GlobalStyle />
+//       <Search handleSearchTerm={handleSearchTerm} searchTerm={searchTerm} />
+//       <Header />
+//       <BooksContainer
+//         books={filterBooks()}
+//         pickBook={pickBook}
+//         title={searchTerm === '' ? 'All books' : 'Search results'}
+//       />
+//       {selectedBook && <DetailPanel book={selectedBook} closePanel={closePanel} />}
+//     </main>
+//   )
+// }
+
+// export default App
