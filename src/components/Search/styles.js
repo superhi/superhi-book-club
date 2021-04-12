@@ -17,6 +17,15 @@ export const SearchContainer = styled.div`
   z-index: 4;
   width: ${({$isSearchOpen}) => ($isSearchOpen ? '500px' : '20px')};
 
+  input,
+  svg:nth-of-type(2) {
+    display: ${({$isSearchOpen}) => ($isSearchOpen ? 'block' : 'none')};
+
+    @media (max-width: 850px) {
+      display: block;
+    }
+  }
+
   @media (max-width: 850px) {
     position: absolute;
     bottom: 12px;
@@ -28,17 +37,7 @@ export const SearchContainer = styled.div`
   }
 `
 
-export const Desktop = styled.div`
-  display: block;
-
-  @media (max-width: 850px) {
-    display: none;
-  }
-`
-
-export const Mobile = styled.div`
-  display: none;
-
+export const Wrapper = styled.div`
   @media (max-width: 850px) {
     display: block;
     background: #ffbccc;
