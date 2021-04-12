@@ -47,17 +47,18 @@ const App = () => {
   const hasFiltered = filteredBooks.length !== books.length
 
   return (
-    <main>
+    <>
       <GlobalStyle />
-      <Search filterBooks={filterBooks} />
-      <Header />
+      <Header>
+        <Search filterBooks={filterBooks} />
+      </Header>
       <BooksContainer
         books={filteredBooks}
         pickBook={pickBook}
         title={hasFiltered ? 'Search results' : 'All books'}
       />
       {selectedBook && <DetailPanel book={selectedBook} closePanel={closePanel} />}
-    </main>
+    </>
   )
 }
 

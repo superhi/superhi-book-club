@@ -2,6 +2,8 @@ import React, {useState, useRef} from 'react'
 import {Input, SearchContainer, Icon, CloseButton, Wrapper} from './styles'
 
 const Search = ({filterBooks}) => {
+  // we're using a ref here so we can use the input as an uncontrolled component but
+  // still be able to clear the search box when they click the x
   const inputEl = useRef(null)
   const [showOnDesktop, setShowOnDesktop] = useState(false)
 
@@ -23,8 +25,8 @@ const Search = ({filterBooks}) => {
     <Wrapper>
       <SearchContainer $showOnDesktop={showOnDesktop}>
         <Icon onClick={showSearch} />
-        <CloseButton onClick={clearSearch} />
         <Input ref={inputEl} type="text" name="search" onChange={handleChange} autoComplete="off" />
+        <CloseButton onClick={clearSearch} />
       </SearchContainer>
     </Wrapper>
   )

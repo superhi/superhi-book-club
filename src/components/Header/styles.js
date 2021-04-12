@@ -11,13 +11,13 @@ export const HeaderContainer = styled.header`
   display: flex;
   box-sizing: border-box;
   align-items: center;
+  justify-content: space-between;
 `
 
 export const Logo = styled(LogoAsset)`
   height: 40px;
   width: 270px;
   display: block;
-  left: 0;
 
   @media (max-width: 800px) {
     height: 33px;
