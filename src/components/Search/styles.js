@@ -1,8 +1,9 @@
 import styled from 'styled-components'
 import {ReactComponent as MagnifyingIcon} from '../../assets/search.svg'
+import {Pill} from '../../styles'
 
 export const Wrapper = styled.div`
-  @media (max-width: 850px) {
+  @media (max-width: 800px) {
     border-top: 2px solid black;
     display: flex;
     align-items: center;
@@ -17,28 +18,19 @@ export const Wrapper = styled.div`
   }
 `
 
-export const SearchContainer = styled.div`
-  border: 2px solid black;
-  border-radius: 30px;
-  height: 20px;
-  background: #a7e1f8;
-  padding: 8px;
-  display: flex;
-  align-items: center;
-  transition: 0.3s;
-  overflow: hidden;
-  width: ${({$showOnDesktop}) => ($showOnDesktop ? '500px' : '20px')};
+export const SearchContainer = styled(Pill)`
+  width: ${({$showOnDesktop}) => ($showOnDesktop ? '420px' : '20px')};
 
   input,
   button {
     display: ${({$showOnDesktop}) => ($showOnDesktop ? 'block' : 'none')};
 
-    @media (max-width: 850px) {
+    @media (max-width: 800px) {
       display: block;
     }
   }
 
-  @media (max-width: 850px) {
+  @media (max-width: 800px) {
     width: 85%;
   }
 `
@@ -56,32 +48,4 @@ export const Input = styled.input`
 export const Icon = styled(MagnifyingIcon)`
   width: 20px;
   cursor: pointer;
-`
-
-// same as in milky mood
-export const CloseButton = styled.button`
-  background: none;
-  border: 0;
-  cursor: pointer;
-  height: 24px;
-  padding: 0;
-  position: relative;
-  width: 24px;
-
-  &:before,
-  &:after {
-    background-color: #000;
-    content: ' ';
-    height: 25px;
-    left: 12px;
-    position: absolute;
-    top: 0;
-    width: 2px;
-  }
-  &:before {
-    transform: rotate(45deg);
-  }
-  &:after {
-    transform: rotate(-45deg);
-  }
 `

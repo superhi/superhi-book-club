@@ -1,55 +1,5 @@
 import styled from 'styled-components'
-import {ReactComponent as CloseIcon} from '../../assets/close-button.svg'
-import {BookCover, P, ItalicP} from '../../styles'
-
-export const Panel = styled.article`
-  background-color: #ffe581;
-  border: 2px solid #000;
-  height: calc(100vh - 270px);
-  width: 440px;
-  position: fixed;
-  z-index: 1;
-  right: 0;
-  top: 0;
-  padding: 150px 60px 120px 60px;
-  overflow: scroll;
-
-  @media (max-width: 800px) {
-    width: calc(100vw - 44px);
-    height: calc(100vh - 240px);
-    right: unset;
-    padding: 120px 20px;
-    z-index: 2;
-  }
-`
-
-export const CloseButton = styled(CloseIcon)`
-  height: 44px;
-  right: 22px;
-  cursor: pointer;
-  position: fixed;
-  top: 124px;
-  z-index: 3;
-
-  @media (max-width: 800px) {
-    top: unset;
-    right: 32px;
-    bottom: 32px;
-  }
-`
-
-export const FeaturedBookCover = styled(BookCover)`
-  cursor: default;
-  margin-bottom: 30px;
-`
-
-export const StyledP = styled(P)`
-  margin-bottom: 30px;
-`
-
-export const Author = styled(ItalicP)`
-  margin-bottom: 30px;
-`
+import {Pill} from '../../styles'
 
 export const BG = styled.div`
   background: rgba(0, 0, 0, 0.5);
@@ -59,4 +9,57 @@ export const BG = styled.div`
   width: 100vw;
   top: 0;
   z-index: 1;
+`
+
+export const Panel = styled.article`
+  background-color: #ffe581;
+  border-left: 2px solid #000;
+  box-sizing: border-box;
+  height: calc(100vh - 82px);
+  width: 660px;
+  position: fixed;
+  z-index: 2;
+  right: 0;
+  bottom: 0;
+  padding: 40px 120px 60px 40px;
+  overflow: scroll;
+
+  @media (max-width: 800px) {
+    border-left: none;
+    width: 100vw;
+    height: calc(100vh - 141px);
+    right: unset;
+    bottom: 66px;
+    padding: 20px 86px 20px 20px;
+    z-index: 2;
+  }
+`
+
+export const CloseWrapper = styled(Pill)`
+  position: fixed;
+  cursor: pointer;
+  top: 120px;
+  right: 40px;
+  width: 20px;
+  z-index: 4;
+
+  button {
+    margin-left: -3px;
+  }
+
+  @media (max-width: 800px) {
+    top: 95px;
+    right: 20px;
+  }
+`
+
+export const P = styled.p`
+  font-family: 'Libre Baskerville', serif;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 30px 0 0;
+`
+
+export const Em = styled.em`
+  font-weight: italic;
 `

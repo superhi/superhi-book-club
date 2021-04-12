@@ -55,6 +55,7 @@ const App = () => {
       <BooksContainer
         books={filteredBooks}
         pickBook={pickBook}
+        isPanelOpen={selectedBook !== null}
         title={hasFiltered ? 'Search results' : 'All books'}
       />
       {selectedBook && <DetailPanel book={selectedBook} closePanel={closePanel} />}
