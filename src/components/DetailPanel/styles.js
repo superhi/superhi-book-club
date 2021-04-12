@@ -40,7 +40,6 @@ export const CloseWrapper = styled(Pill)`
   cursor: pointer;
   top: 120px;
   right: 40px;
-  width: 20px;
   z-index: 4;
 
   button {

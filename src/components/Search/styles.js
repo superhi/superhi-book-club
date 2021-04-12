@@ -19,6 +19,7 @@ export const Wrapper = styled.div`
 `
 
 export const SearchContainer = styled(Pill)`
+  transition: 0.3s;
   width: ${({$showOnDesktop}) => ($showOnDesktop ? '420px' : '20px')};
 
   input,

@@ -19,8 +19,8 @@ export const Pill = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: 0.3s;
   overflow: hidden;
+  width: 20px;
 `
 
 export const Close = styled.button`
