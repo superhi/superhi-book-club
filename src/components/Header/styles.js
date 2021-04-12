@@ -3,7 +3,7 @@ import {ReactComponent as LogoAsset} from '../../assets/logo.svg'
 
 export const HeaderContainer = styled.header`
   background: #ffbccc;
-  padding: 20px;
+  padding: 20px 40px;
   border-bottom: 2px solid black;
   position: fixed;
   z-index: 3;
@@ -11,13 +11,17 @@ export const HeaderContainer = styled.header`
   display: flex;
   box-sizing: border-box;
   align-items: center;
+  justify-content: space-between;
+
+  @media (max-width: 800px) {
+    padding: 20px;
+  }
 `
 
 export const Logo = styled(LogoAsset)`
   height: 40px;
   width: 270px;
   display: block;
-  left: 0;
 
   @media (max-width: 800px) {
     height: 33px;

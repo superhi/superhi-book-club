@@ -1,17 +1,20 @@
 import React from 'react'
-import {CloseButton, Panel, FeaturedBookCover, StyledP, BG, Author} from './styles'
-import {H2, ItalicP} from '../../styles'
+import Book from '../Book'
+import {CloseWrapper, Panel, BG, P, Em} from './styles'
+import {Close} from '../../styles'
 
 const DetailPanel = ({book, closePanel}) => (
   <>
     <BG onClick={closePanel} />
     <Panel>
-      <CloseButton onClick={closePanel} />
-      <H2>{book.title}</H2>
-      <Author>by {book.author}</Author>
-      <FeaturedBookCover src={book.image} alt={`Book cover for ${book.title} by ${book.author}`} />
-      <StyledP>{book.description}</StyledP>
-      <ItalicP>Published in {book.published}</ItalicP>
+      <CloseWrapper onClick={closePanel}>
+        <Close />
+      </CloseWrapper>
+      <Book book={book} isLarge={true} />
+      <P>{book.description}</P>
+      <P>
+        <Em>Published in {book.published}</Em>
+      </P>
     </Panel>
   </>
 )

@@ -1,56 +1,33 @@
-import React, {useState} from 'react'
-import {Input, SearchContainer, Icon, CloseButton, Mobile, Desktop} from './styles'
+import React, {useState, useRef} from 'react'
+import {Input, SearchContainer, Icon, Wrapper} from './styles'
+import {Close} from '../../styles'
 
-const Search = ({searchTerm, handleSearchTerm}) => {
-  const [searchDisplay, setSearchDisplay] = useState(false)
+const Search = ({filterBooks}) => {
+  const inputEl = useRef(null)
+  const [showOnDesktop, setShowOnDesktop] = useState(false)
 
   const handleChange = (event) => {
-    handleSearchTerm(event.target.value)
+    filterBooks(event.target.value)
   }
 
-  const handleClick = () => {
-    setSearchDisplay((searchDisplay) => !searchDisplay)
+  const showSearch = () => {
+    setShowOnDesktop(true)
   }
 
   const clearSearch = () => {
-    handleSearchTerm('')
-    setSearchDisplay(false)
+    filterBooks('')
+    setShowOnDesktop(false)
+    inputEl.current.value = ''
   }
 
   return (
-    <>
-      <Desktop>
-        <SearchContainer $isSearchOpen={searchDisplay}>
-          <Icon onClick={handleClick} />
-          {searchDisplay === true && (
-            <>
-              <CloseButton onClick={clearSearch} />
-              <Input
-                type="text"
-                name="search"
-                value={searchTerm}
-                onChange={handleChange}
-                autoComplete="off"
-              />
-            </>
-          )}
-        </SearchContainer>
-      </Desktop>
-
-      <Mobile>
-        <SearchContainer>
-          <Icon />
-          <CloseButton onClick={() => handleSearchTerm('')} />
-          <Input
-            type="text"
-            name="search"
-            value={searchTerm}
-            onChange={handleChange}
-            autoComplete="off"
-          />
-        </SearchContainer>
-      </Mobile>
-    </>
+    <Wrapper>
+      <SearchContainer $showOnDesktop={showOnDesktop}>
+        <Icon onClick={showSearch} />
+        <Input ref={inputEl} type="text" name="search" onChange={handleChange} autoComplete="off" />
+        <Close onClick={clearSearch} />
+      </SearchContainer>
+    </Wrapper>
   )
 }
 

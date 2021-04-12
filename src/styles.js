@@ -10,40 +10,42 @@ export const GlobalStyle = createGlobalStyle`
   }
 `
 
-export const H1 = styled.h1`
-  margin: 0;
-`
-
-export const H2 = styled.h2`
-  font-size: 42px;
-  margin: 0 0 10px 0;
-
-  @media (max-width: 800px) {
-    font-size: 32px;
-  }
-`
-
-export const ItalicP = styled.p`
-  font-family: 'Libre Baskerville', serif;
-  font-style: italic;
-  font-size: 16px;
-  margin: 0;
-  line-height: 1.6;
-`
-
-export const P = styled.p`
-  font-family: 'Libre Baskerville', serif;
-  font-size: 16px;
-  line-height: 1.6;
-  margin: 0;
-`
-
-export const BookCover = styled.img`
-  filter: grayscale(100%);
+export const Pill = styled.div`
   border: 2px solid black;
-  object-fit: cover;
+  border-radius: 30px;
+  height: 20px;
+  background: #a7e1f8;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  overflow: hidden;
+`
+
+export const Close = styled.button`
+  background: none;
+  border: 0;
   cursor: pointer;
-  aspect-ratio: 3 / 4;
-  width: 100%;
-  margin-bottom: 16px;
+  height: 24px;
+  padding: 0;
+  position: relative;
+  width: 24px;
+
+  &:before,
+  &:after {
+    background-color: #000;
+    content: ' ';
+    height: 24px;
+    left: 12px;
+    position: absolute;
+    top: 0;
+    width: 2px;
+  }
+  &:before {
+    transform: rotate(45deg);
+  }
+  &:after {
+    transform: rotate(-45deg);
+  }
 `

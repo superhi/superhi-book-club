@@ -1,16 +1,13 @@
 import React from 'react'
-import {Container, BookTitle} from './styles'
-import {ItalicP, BookCover} from '../../styles'
+import {Container, Cover, Title, Author} from './styles'
 
-const Book = ({book, pickBook}) => (
-  <Container>
-    <BookCover
-      src={book.image}
-      alt={`Book cover for ${book.title} by ${book.author}`}
-      onClick={() => pickBook(book)}
-    />
-    <BookTitle>{book.title}</BookTitle>
-    <ItalicP>by {book.author}</ItalicP>
+const Book = ({book, pickBook, isLarge}) => (
+  <Container $isLarge={isLarge} onClick={() => pickBook && pickBook(book)}>
+    <Cover src={book.image} alt={`Book cover for ${book.title} by ${book.author}`} />
+    <figcaption>
+      <Title $isLarge={isLarge}>{book.title}</Title>
+      <Author>by {book.author}</Author>
+    </figcaption>
   </Container>
 )
 
