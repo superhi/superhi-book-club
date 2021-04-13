@@ -1,20 +1,20 @@
-import React, {useRef} from 'react'
+import React from 'react' // , {useRef}
 import {Input, SearchContainer} from './styles'
 
-const Search = () => {
-  const inputEl = useRef(null)
+const Search = ({filterBooks}) => {
+  // const inputEl = useRef(null)
 
-  // const handleChange = (event) => {
-  //   filterBooks(event.target.value)
-  // }
+  const handleChange = (event) => {
+    filterBooks(event.target.value)
+  }
 
   return (
     <SearchContainer>
       <Input
-        ref={inputEl}
+        // ref={inputEl}
         type="text"
         name="search"
-        // onChange={handleChange}
+        onChange={handleChange}
         autoComplete="off"
       />
     </SearchContainer>
