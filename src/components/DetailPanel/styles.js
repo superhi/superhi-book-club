@@ -27,10 +27,9 @@ export const Panel = styled.article`
   @media (max-width: 800px) {
     border-left: none;
     width: 100vw;
-    height: calc(100vh - 141px);
+    height: calc(100vh - 74px);
     right: unset;
-    bottom: 66px;
-    padding: 20px 86px 20px 20px;
+    padding: 40px 86px 20px 20px;
     z-index: 2;
   }
 `
