@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import {Pill} from '../../styles'
 
 export const SearchContainer = styled(Pill)`
-  transition: 0.3s;
   width: 420px;
 `
 
