@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react'
 import {GlobalStyle} from './styles'
 import BooksContainer from './components/BooksContainer'
 import Header from './components/Header'
-import DetailPanel from './components/DetailPanel'
 
 const App = () => {
   const [books, setBooks] = useState([])
@@ -22,16 +21,13 @@ const App = () => {
     setSelectedBook(book)
   }
 
-  const closePanel = () => {
-    setSelectedBook(null)
-  }
+  console.log(selectedBook)
 
   return (
     <>
       <GlobalStyle />
       <Header />
-      <BooksContainer books={books} pickBook={pickBook} isPanelOpen={selectedBook !== null} />
-      {selectedBook && <DetailPanel book={selectedBook} closePanel={closePanel} />}
+      <BooksContainer books={books} pickBook={pickBook} />
     </>
   )
 }
