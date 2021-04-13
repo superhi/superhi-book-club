@@ -46,8 +46,9 @@ export const CloseWrapper = styled(Pill)`
   }
 
   @media (max-width: 800px) {
-    top: 95px;
-    right: 20px;
+    top: unset;
+    bottom: 40px;
+    right: 40px;
   }
 `
 
