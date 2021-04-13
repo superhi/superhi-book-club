@@ -1,18 +1,18 @@
-import React, {useRef} from 'react'
+import React, {useState, useRef} from 'react'
 import {Input, SearchContainer, Icon} from './styles'
 import {Close} from '../../styles'
 
 const Search = ({filterBooks}) => {
   const inputEl = useRef(null)
-  // const [showOnDesktop, setShowOnDesktop] = useState(false)
+  const [showOnDesktop, setShowOnDesktop] = useState(false)
 
   const handleChange = (event) => {
     filterBooks(event.target.value)
   }
 
-  // const showSearch = () => {
-  //   setShowOnDesktop(true)
-  // }
+  const showSearch = () => {
+    setShowOnDesktop(true)
+  }
 
   const clearSearch = () => {
     filterBooks('')
@@ -21,12 +21,8 @@ const Search = ({filterBooks}) => {
   }
 
   return (
-    <SearchContainer
-    // $showOnDesktop={showOnDesktop}
-    >
-      <Icon
-      // onClick={showSearch}
-      />
+    <SearchContainer $showOnDesktop={showOnDesktop}>
+      <Icon onClick={showSearch} />
       <Input ref={inputEl} type="text" name="search" onChange={handleChange} autoComplete="off" />
       <Close onClick={clearSearch} />
     </SearchContainer>

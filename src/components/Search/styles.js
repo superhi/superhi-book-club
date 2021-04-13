@@ -3,14 +3,13 @@ import {ReactComponent as MagnifyingIcon} from '../../assets/search.svg'
 import {Pill} from '../../styles'
 
 export const SearchContainer = styled(Pill)`
-  transition: 0.3s;
-  width: 420px;
-  /* width: ${({$showOnDesktop}) => ($showOnDesktop ? '420px' : '20px')}; */
+  /* transition: 0.3s; */
+  width: ${({$showOnDesktop}) => ($showOnDesktop ? '420px' : '20px')};
 
-  /* input,
+  input,
   button {
     display: ${({$showOnDesktop}) => ($showOnDesktop ? 'block' : 'none')};
-  } */
+  }
 `
 
 export const Input = styled.input`
