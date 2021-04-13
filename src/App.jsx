@@ -45,17 +45,18 @@ const App = () => {
   }
 
   const hasFiltered = filteredBooks.length !== books.length
+  const isPanelOpen = selectedBook !== null
 
   return (
     <>
       <GlobalStyle />
       <Header>
-        <Search filterBooks={filterBooks} />
+        <Search filterBooks={filterBooks} isPanelOpen={isPanelOpen} />
       </Header>
       <BooksContainer
         books={filteredBooks}
         pickBook={pickBook}
-        isPanelOpen={selectedBook !== null}
+        isPanelOpen={isPanelOpen}
         title={hasFiltered ? 'Search results' : 'All books'}
       />
       {selectedBook && <DetailPanel book={selectedBook} closePanel={closePanel} />}
