@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.figure`
-  cursor: ${({$isLarge}) => ($isLarge ? 'auto' : 'pointer')};
+  cursor: ${({$isLarge}) => ($isLarge ? 'default' : 'pointer')};
   margin: 0;
 `
 
