@@ -16,8 +16,8 @@ const Search = ({filterBooks}) => {
 
   const clearSearch = () => {
     filterBooks('')
-    // setShowOnDesktop(false)
     inputEl.current.value = ''
+    setShowOnDesktop(false)
   }
 
   return (
