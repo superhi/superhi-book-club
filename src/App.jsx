@@ -44,7 +44,7 @@ const App = () => {
     }
   }
 
-  const hasFiltered = filteredBooks.length !== books.length
+  // const hasFiltered = filteredBooks.length !== books.length
 
   return (
     <>
@@ -56,7 +56,7 @@ const App = () => {
         books={filteredBooks}
         pickBook={pickBook}
         isPanelOpen={selectedBook !== null}
-        title={hasFiltered ? 'Search results' : 'All books'}
+        // title={hasFiltered ? 'Search results' : 'All books'}
       />
       {selectedBook && <DetailPanel book={selectedBook} closePanel={closePanel} />}
     </>
