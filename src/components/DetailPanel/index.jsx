@@ -7,7 +7,7 @@ import {
 
 const DetailPanel = ({book}) => (
   <Panel>
-    <Book book={book} />
+    <Book book={book} isLarge={true} />
     <p>{book.description}</p>
     <p>
       <em>Published in {book.published}</em>
