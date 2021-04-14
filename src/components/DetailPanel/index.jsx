@@ -1,18 +1,20 @@
-import React, {useRef, useEffect} from 'react'
+import React, {useRef} from 'react'
 import Book from '../Book'
 import {CloseWrapper, Panel, BG, P, Em} from './styles'
 import {Close} from '../../styles'
 
 const DetailPanel = ({book, closePanel, state}) => {
   const panelEl = useRef(null)
-  const prevBook = useRef(null)
+  // const prevBook = useRef(null)
 
-  useEffect(() => {
-    if (prevBook.current !== book) {
-      panelEl.current.scrollTop = 0
-    }
-    prevBook.current = book
-  }, [book, prevBook])
+  // useEffect(() => {
+  //   if (prevBook.current !== book) {
+  //     panelEl.current.scrollTop = 0
+  //   }
+  //   prevBook.current = book
+  // }, [book, prevBook])
+
+  console.log(state)
 
   return (
     <>
