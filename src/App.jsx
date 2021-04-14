@@ -47,8 +47,6 @@ const App = () => {
     }
   }
 
-  const hasFiltered = filteredBooks.length !== books.length
-
   return (
     <>
       <GlobalStyle />
@@ -59,7 +57,7 @@ const App = () => {
         books={filteredBooks}
         pickBook={pickBook}
         isPanelOpen={showPanel}
-        title={hasFiltered ? 'Search results' : 'All books'}
+        title={filteredBooks.length !== books.length ? 'Search results' : 'All books'}
       />
       <Transition in={showPanel} timeout={300}>
         {(state) => <DetailPanel book={selectedBook} state={state} closePanel={closePanel} />}
