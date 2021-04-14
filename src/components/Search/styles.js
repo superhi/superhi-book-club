@@ -4,8 +4,8 @@ import {Pill} from '../../styles'
 
 export const Wrapper = styled.div`
   @media (max-width: 800px) {
-    display: ${({$isPanelOpen}) => ($isPanelOpen ? 'none' : 'flex')};
     border-top: 2px solid black;
+    display: flex;
     align-items: center;
     justify-content: center;
     background: #ffbccc;

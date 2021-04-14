@@ -9,6 +9,9 @@ export const BG = styled.div`
   width: 100vw;
   top: 0;
   z-index: 1;
+  transition: 300ms;
+  opacity: ${({$state}) => ($state === 'entering' || $state === 'entered' ? 1 : 0)};
+  pointer-events: ${({$state}) => ($state === 'exited' ? 'none' : 'auto')};
 `
 
 export const Panel = styled.article`
@@ -23,14 +26,18 @@ export const Panel = styled.article`
   bottom: 0;
   padding: 40px 120px 60px 40px;
   overflow: scroll;
+  transition: 300ms;
+  right: ${({$state}) => ($state === 'entering' || $state === 'entered' ? 0 : '-660px')};
 
   @media (max-width: 800px) {
     border-left: none;
     width: 100vw;
-    height: calc(100vh - 74px);
+    height: calc(100vh - 75px);
     right: unset;
     padding: 40px 86px 20px 20px;
     z-index: 2;
+    right: 0;
+    bottom: ${({$state}) => ($state === 'entering' || $state === 'entered' ? 0 : '-100vh')};
   }
 `
 
@@ -40,6 +47,7 @@ export const CloseWrapper = styled(Pill)`
   top: 120px;
   right: 40px;
   z-index: 4;
+  display: ${({$state}) => ($state === 'entered' ? 'flex' : 'none')};
 
   button {
     margin-left: -3px;
@@ -47,8 +55,8 @@ export const CloseWrapper = styled(Pill)`
 
   @media (max-width: 800px) {
     top: unset;
-    bottom: 40px;
-    right: 40px;
+    bottom: 20px;
+    right: 20px;
   }
 `
 
