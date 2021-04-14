@@ -21,7 +21,7 @@ const DetailPanel = ({book, closePanel, state}) => {
         <CloseWrapper onClick={closePanel} $state={state}>
           <Close />
         </CloseWrapper>
-        {book && (
+        {book && state !== 'exited' && (
           <>
             <Book book={book} isLarge={true} />
             <P>{book.description}</P>
