@@ -1,10 +1,10 @@
-import React, {useRef} from 'react'
+import React from 'react'
 import Book from '../Book'
 import {CloseWrapper, Panel, BG, P, Em} from './styles'
 import {Close} from '../../styles'
 
 const DetailPanel = ({book, closePanel, state}) => {
-  const panelEl = useRef(null)
+  // const panelEl = useRef(null)
   // const prevBook = useRef(null)
 
   // useEffect(() => {
@@ -19,7 +19,7 @@ const DetailPanel = ({book, closePanel, state}) => {
   return (
     <>
       <BG onClick={closePanel} $state={state} />
-      <Panel $state={state} ref={panelEl}>
+      <Panel $state={state}>
         <CloseWrapper onClick={closePanel} $state={state}>
           <Close />
         </CloseWrapper>

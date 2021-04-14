@@ -22,7 +22,6 @@ export const Panel = styled.article`
   width: 660px;
   position: fixed;
   z-index: 2;
-  right: 0;
   bottom: 0;
   padding: 40px 120px 60px 40px;
   overflow: scroll;
@@ -37,7 +36,7 @@ export const Panel = styled.article`
     padding: 40px 86px 20px 20px;
     z-index: 2;
     right: 0;
-    bottom: ${({$state}) => ($state === 'entering' || $state === 'entered' ? 0 : '-100vh')};
+    /* bottom: ${({$state}) => ($state === 'entering' || $state === 'entered' ? 0 : '-100vh')}; */
   }
 `
 
