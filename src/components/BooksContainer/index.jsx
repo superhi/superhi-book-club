@@ -16,16 +16,17 @@ const BooksContainer = ({books, pickBook, title, isPanelOpen}) => {
 
   useEffect(() => {
     const handleScroll = debounce(() => {
-      if (!isPanelOpen) {
-        setScroll(window.scrollY)
-      }
+      setScroll(window.scrollY)
     }, 100)
-    window.addEventListener('scroll', handleScroll)
+
+    if (!isPanelOpen) {
+      window.addEventListener('scroll', handleScroll)
+    }
 
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
-  })
+  }, [isPanelOpen])
 
   return (
     <Container $isPanelOpen={isPanelOpen} $top={scroll}>
