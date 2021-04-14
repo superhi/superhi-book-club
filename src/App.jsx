@@ -34,14 +34,14 @@ const App = () => {
       <GlobalStyle />
       <Header />
       <BooksContainer books={books} pickBook={pickBook} isPanelOpen={showPanel} />
-      {showPanel && (
+      {/* {showPanel && (
         <Transition in={showPanel} timeout={300}>
           {(state) => <DetailPanel book={selectedBook} state={state} closePanel={closePanel} />}
         </Transition>
-      )}
-      {/* <Transition in={showPanel} timeout={300}>
+      )} */}
+      <Transition in={showPanel} timeout={300}>
         {(state) => <DetailPanel book={selectedBook} state={state} closePanel={closePanel} />}
-      </Transition> */}
+      </Transition>
     </>
   )
 }
