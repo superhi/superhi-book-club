@@ -33,11 +33,9 @@ export const Panel = styled.article`
     border-left: none;
     width: 100vw;
     height: calc(100vh - 75px);
-    right: unset;
     padding: 40px 86px 20px 20px;
-    z-index: 2;
-    right: 0;
     bottom: ${({$state}) => ($state === 'entering' || $state === 'entered' ? 0 : '-100vh')};
+    right: unset;
   }
 `
 
