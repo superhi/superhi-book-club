@@ -12,10 +12,19 @@ const App = () => {
   const [selectedBook, setSelectedBook] = useState(null)
   const [showPanel, setShowPanel] = useState(false)
 
+  console.log('this message will load first')
+
   useEffect(() => {
+    setTimeout(() => {
+      console.log('when is this message going to load?')
+    }, Math.random() * 1000)
+
     const fetchData = async () => {
+      console.log('then after the component has rendered, this effect hook is going to run.')
       const response = await fetch('https://book-club-json.herokuapp.com/books')
+      console.log('here is the original response from the API: ', response)
       const books = await response.json()
+      console.log('and the jsonified books array', books)
       setBooks(books)
       setFilteredBooks(books)
     }
