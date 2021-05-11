@@ -12,7 +12,7 @@ const BooksContainer = ({books, pickBook, title, isPanelOpen}) => {
       window.scroll(0, scroll)
     }
     prevPanelState.current = isPanelOpen
-  }, [isPanelOpen, prevPanelState])
+  }, [isPanelOpen, prevPanelState, scroll])
 
   useEffect(() => {
     const handleScroll = debounce(() => {
