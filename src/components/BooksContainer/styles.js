@@ -6,7 +6,7 @@ export const Container = styled.div`
   padding: 160px 40px;
   overflow: ${({$isPanelOpen}) => ($isPanelOpen ? 'hidden' : 'scroll')};
   position: ${({$isPanelOpen}) => ($isPanelOpen ? 'fixed' : 'relative')};
-  top: ${({$isPanelOpen, $top}) => ($isPanelOpen ? `-${$top}px` : '0')};
+  top: ${({$isPanelOpen, $top}) => ($isPanelOpen ? `-${$top - 10}px` : '0')};
 
   @media (max-width: 800px) {
     padding: 114px 20px;
