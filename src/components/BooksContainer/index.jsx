@@ -1,12 +1,20 @@
 import React, {useRef, useEffect, useState} from 'react'
 import {debounce} from 'lodash-es'
 import Book from '../Book'
-import {Container, BookList} from './styles'
+import {Container, BookList, NoBooksContainer} from './styles'
+import {ReactComponent as SadFace} from './sad-face.svg'
 
-const BooksContainer = ({books, pickBook, isPanelOpen}) => {
+const NoBooksMessage = () => (
+  <NoBooksContainer>
+    <h3>Oh dear!</h3>
+    <SadFace />
+    <p>You haven’t saved any books yet.</p>
+  </NoBooksContainer>
+)
+
+const BooksContainer = ({books, pickBook, isPanelOpen, savedBooks, showSavedBooks}) => {
   const prevPanelState = useRef(false)
   const [scroll, setScroll] = useState(0)
-  const [savedBooks, setSavedBooks] = useState([])
 
   useEffect(() => {
     if (prevPanelState.current && !isPanelOpen) {
@@ -31,17 +39,15 @@ const BooksContainer = ({books, pickBook, isPanelOpen}) => {
 
   return (
     <Container $isPanelOpen={isPanelOpen} $top={scroll}>
-      <BookList>
-        {books.map((book) => (
-          <Book
-            key={book.id}
-            book={book}
-            pickBook={pickBook}
-            savedBooks={savedBooks}
-            setSavedBooks={setSavedBooks}
-          />
-        ))}
-      </BookList>
+      {savedBooks.length < 1 && showSavedBooks ? (
+        <NoBooksMessage />
+      ) : (
+        <BookList>
+          {books.map((book) => (
+            <Book key={book.id} book={book} pickBook={pickBook} />
+          ))}
+        </BookList>
+      )}
     </Container>
   )
 }

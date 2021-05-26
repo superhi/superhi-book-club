@@ -69,6 +69,8 @@ const App = () => {
         pickBook={pickBook}
         isPanelOpen={showPanel}
         allBooksLength={books.length}
+        savedBooks={savedBooks}
+        showSavedBooks={showSavedBooks}
       />
       <Transition in={showPanel} timeout={300}>
         {(state) => (

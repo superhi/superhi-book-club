@@ -30,3 +30,12 @@ export const BookList = styled.div`
     grid-column-gap: 20px;
   }
 `
+
+export const NoBooksContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 100px auto;
+  text-align: center;
+`
