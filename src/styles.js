@@ -62,3 +62,15 @@ export const H2 = styled.h2`
     font-size: 32px;
   }
 `
+
+export const Button = styled.button`
+  display: block;
+  border-radius: 30px;
+  padding: 10px 16px;
+  border: 2px solid #000;
+  background: transparent;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 18px;
+  margin-bottom: ${({$isHeader}) => ($isHeader ? '0' : '14px')};
+  cursor: pointer;
+`

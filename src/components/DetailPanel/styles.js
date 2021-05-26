@@ -68,15 +68,3 @@ export const P = styled.p`
 export const Em = styled.em`
   font-style: italic;
 `
-
-export const Button = styled.button`
-  display: block;
-  border-radius: 30px;
-  padding: 10px 16px;
-  border: 2px solid #000;
-  background: transparent;
-  font-family: 'Work Sans', sans-serif;
-  font-size: 18px;
-  margin-bottom: 14px;
-  cursor: pointer;
-`

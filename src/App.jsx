@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import {Transition} from 'react-transition-group'
-import {GlobalStyle, H2} from './styles'
+import {GlobalStyle, H2, Button} from './styles'
 import BooksContainer from './components/BooksContainer'
 import Header from './components/Header'
 import DetailPanel from './components/DetailPanel'
@@ -55,8 +55,12 @@ const App = () => {
     <>
       <GlobalStyle />
       <Header>
-        <button onClick={() => setShowSavedBooks(false)}>View all books</button>
-        <button onClick={() => setShowSavedBooks(true)}>Saved books</button>
+        <Button onClick={() => setShowSavedBooks(false)} $isHeader={true}>
+          View all books
+        </Button>
+        <Button onClick={() => setShowSavedBooks(true)} $isHeader={true}>
+          Saved books
+        </Button>
         <Search filterBooks={filterBooks} />
       </Header>
       {showSavedBooks ? (
