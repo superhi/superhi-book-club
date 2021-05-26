@@ -29,7 +29,7 @@ const DetailPanel = ({book, closePanel, state, savedBooks, setSavedBooks}) => {
         <CloseWrapper onClick={closePanel} $state={state}>
           <Close />
         </CloseWrapper>
-        <Button onClick={handleSave}>Favorite</Button>
+        <Button onClick={handleSave}>Save for later</Button>
         {book && (
           <>
             <Book book={book} isLarge={true} />
