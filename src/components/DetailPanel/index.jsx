@@ -6,7 +6,6 @@ import {Close, Button} from '../../styles'
 const DetailPanel = ({book, closePanel, state, savedBooks, setSavedBooks}) => {
   const panelEl = useRef(null)
   const prevBook = useRef(null)
-  const buttonEl = useRef(null)
 
   useEffect(() => {
     if (prevBook.current !== book) {
@@ -30,7 +29,7 @@ const DetailPanel = ({book, closePanel, state, savedBooks, setSavedBooks}) => {
         <CloseWrapper onClick={closePanel} $state={state}>
           <Close />
         </CloseWrapper>
-        <Button onClick={handleSave} ref={buttonEl}>
+        <Button onClick={handleSave}>
           {savedBooks.includes(book) ? 'Saved!' : 'Save for later'}
         </Button>
         {book && (
