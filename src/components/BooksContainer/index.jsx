@@ -1,14 +1,13 @@
 import React, {useRef, useEffect, useState} from 'react'
 import {debounce} from 'lodash-es'
 import Book from '../Book'
-import {Container, BookList, NoBooksContainer} from './styles'
-import {ReactComponent as SadFace} from './sad-face.svg'
+import {Container, BookList, NoBooksContainer, H3, H4, SadFace} from './styles'
 
 const NoBooksMessage = () => (
   <NoBooksContainer>
-    <h3>Oh dear!</h3>
+    <H3>Oh dear!</H3>
     <SadFace />
-    <p>You haven’t saved any books yet.</p>
+    <H4>You haven’t saved any books yet.</H4>
   </NoBooksContainer>
 )
 

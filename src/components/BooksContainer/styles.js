@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import {ReactComponent as SadFaceSVG} from './sad-face.svg'
 
 export const Container = styled.div`
   background-color: #a7e1f8;
@@ -38,4 +39,18 @@ export const NoBooksContainer = styled.div`
   flex-direction: column;
   margin: 100px auto;
   text-align: center;
+`
+
+export const H3 = styled.h3`
+  font-size: 34px;
+  margin: 0;
+`
+
+export const H4 = styled.h4`
+  font-size: 24px;
+  margin: 0;
+`
+
+export const SadFace = styled(SadFaceSVG)`
+  margin: 20px 0;
 `
