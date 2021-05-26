@@ -15,8 +15,6 @@ const BooksContainer = ({books, pickBook, isPanelOpen, savedBooks, showSavedBook
   const prevPanelState = useRef(false)
   const [scroll, setScroll] = useState(0)
 
-  console.log(scroll)
-
   useEffect(() => {
     if (prevPanelState.current && !isPanelOpen) {
       window.scroll(0, scroll)

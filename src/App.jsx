@@ -59,7 +59,7 @@ const App = () => {
           View all books
         </Button>
         <Button onClick={() => setShowSavedBooks(true)} $isHeader={true}>
-          Saved books
+          {savedBooks.length} Saved books
         </Button>
         <Search filterBooks={filterBooks} />
       </Header>
