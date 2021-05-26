@@ -37,8 +37,9 @@ export const NoBooksContainer = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: 100px auto;
   text-align: center;
+  width: 100vw;
+  height: 50vh;
 `
 
 export const H3 = styled.h3`
