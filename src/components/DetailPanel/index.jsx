@@ -1,9 +1,9 @@
 import React, {useRef, useEffect} from 'react'
 import Book from '../Book'
-import {CloseWrapper, Panel, BG, P, Em} from './styles'
+import {CloseWrapper, Panel, BG, P, Em, Button} from './styles'
 import {Close} from '../../styles'
 
-const DetailPanel = ({book, closePanel, state}) => {
+const DetailPanel = ({book, closePanel, state, savedBooks, setSavedBooks}) => {
   const panelEl = useRef(null)
   const prevBook = useRef(null)
 
@@ -14,6 +14,14 @@ const DetailPanel = ({book, closePanel, state}) => {
     prevBook.current = book
   }, [book, prevBook])
 
+  const handleSave = () => {
+    if (savedBooks.includes(book)) {
+      setSavedBooks((savedBooks) => savedBooks.filter((item) => item !== book))
+    } else {
+      setSavedBooks((savedBooks) => [...savedBooks, book])
+    }
+  }
+
   return (
     <>
       <BG onClick={closePanel} $state={state} />
@@ -21,6 +29,7 @@ const DetailPanel = ({book, closePanel, state}) => {
         <CloseWrapper onClick={closePanel} $state={state}>
           <Close />
         </CloseWrapper>
+        <Button onClick={handleSave}>Favorite</Button>
         {book && (
           <>
             <Book book={book} isLarge={true} />

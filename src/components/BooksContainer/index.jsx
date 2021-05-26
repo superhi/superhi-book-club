@@ -1,11 +1,12 @@
 import React, {useRef, useEffect, useState} from 'react'
 import {debounce} from 'lodash-es'
 import Book from '../Book'
-import {Container, H2, BookList} from './styles'
+import {Container, BookList} from './styles'
 
-const BooksContainer = ({books, pickBook, title, isPanelOpen}) => {
+const BooksContainer = ({books, pickBook, isPanelOpen}) => {
   const prevPanelState = useRef(false)
   const [scroll, setScroll] = useState(0)
+  const [savedBooks, setSavedBooks] = useState([])
 
   useEffect(() => {
     if (prevPanelState.current && !isPanelOpen) {
@@ -30,10 +31,15 @@ const BooksContainer = ({books, pickBook, title, isPanelOpen}) => {
 
   return (
     <Container $isPanelOpen={isPanelOpen} $top={scroll}>
-      <H2>{title}</H2>
       <BookList>
         {books.map((book) => (
-          <Book key={book.id} book={book} pickBook={pickBook} />
+          <Book
+            key={book.id}
+            book={book}
+            pickBook={pickBook}
+            savedBooks={savedBooks}
+            setSavedBooks={setSavedBooks}
+          />
         ))}
       </BookList>
     </Container>

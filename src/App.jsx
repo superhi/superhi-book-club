@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import {Transition} from 'react-transition-group'
-import {GlobalStyle} from './styles'
+import {GlobalStyle, H2} from './styles'
 import BooksContainer from './components/BooksContainer'
 import Header from './components/Header'
 import DetailPanel from './components/DetailPanel'
@@ -11,6 +11,8 @@ const App = () => {
   const [filteredBooks, setFilteredBooks] = useState([])
   const [selectedBook, setSelectedBook] = useState(null)
   const [showPanel, setShowPanel] = useState(false)
+  const [savedBooks, setSavedBooks] = useState([])
+  const [showSavedBooks, setShowSavedBooks] = useState(false)
 
   useEffect(() => {
     const fetchData = async () => {
@@ -53,16 +55,31 @@ const App = () => {
     <>
       <GlobalStyle />
       <Header>
+        <button onClick={() => setShowSavedBooks(false)}>View all books</button>
+        <button onClick={() => setShowSavedBooks(true)}>Saved books</button>
         <Search filterBooks={filterBooks} />
       </Header>
+      {showSavedBooks ? (
+        <H2>Saved Books</H2>
+      ) : (
+        <H2>{hasFiltered ? 'Search results' : 'All books'}</H2>
+      )}
       <BooksContainer
-        books={filteredBooks}
+        books={showSavedBooks ? savedBooks : filteredBooks}
         pickBook={pickBook}
         isPanelOpen={showPanel}
-        title={hasFiltered ? 'Search results' : 'All books'}
+        allBooksLength={books.length}
       />
       <Transition in={showPanel} timeout={300}>
-        {(state) => <DetailPanel book={selectedBook} state={state} closePanel={closePanel} />}
+        {(state) => (
+          <DetailPanel
+            book={selectedBook}
+            state={state}
+            closePanel={closePanel}
+            savedBooks={savedBooks}
+            setSavedBooks={setSavedBooks}
+          />
+        )}
       </Transition>
     </>
   )

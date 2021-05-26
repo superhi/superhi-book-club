@@ -12,15 +12,6 @@ export const Container = styled.div`
   }
 `
 
-export const H2 = styled.h2`
-  font-size: 42px;
-  margin: 0 0 10px 0;
-
-  @media (max-width: 800px) {
-    font-size: 32px;
-  }
-`
-
 export const BookList = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);

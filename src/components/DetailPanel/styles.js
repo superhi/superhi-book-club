@@ -68,3 +68,7 @@ export const P = styled.p`
 export const Em = styled.em`
   font-style: italic;
 `
+
+export const Button = styled.button`
+  display: block;
+`

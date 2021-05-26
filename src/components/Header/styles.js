@@ -12,6 +12,7 @@ export const HeaderContainer = styled.header`
   box-sizing: border-box;
   align-items: center;
   justify-content: space-between;
+  top: 0;
 
   @media (max-width: 800px) {
     padding: 20px;

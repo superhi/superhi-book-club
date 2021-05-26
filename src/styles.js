@@ -50,3 +50,15 @@ export const Close = styled.button`
     transform: rotate(-45deg);
   }
 `
+
+export const H2 = styled.h2`
+  font-size: 42px;
+  margin: 10px 40px;
+  position: relative;
+  top: 150px;
+  z-index: 1;
+
+  @media (max-width: 800px) {
+    font-size: 32px;
+  }
+`
