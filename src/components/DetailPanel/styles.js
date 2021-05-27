@@ -21,7 +21,7 @@ export const Panel = styled.article`
   height: calc(100vh - 82px);
   width: 660px;
   position: fixed;
-  z-index: 2;
+  z-index: 4;
   right: 0;
   bottom: 0;
   padding: 40px 120px 60px 40px;

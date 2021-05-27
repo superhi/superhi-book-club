@@ -7,6 +7,7 @@ export const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   gap: 22px;
+  z-index: 1;
 
   @media (max-width: 1000px) {
     border-top: 2px solid black;
@@ -16,7 +17,6 @@ export const Wrapper = styled.div`
     left: 0;
     bottom: 0;
     position: fixed;
-    z-index: 1;
   }
 `
 
