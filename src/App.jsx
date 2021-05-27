@@ -1,6 +1,11 @@
 import React, {useState, useEffect} from 'react'
 import {Transition} from 'react-transition-group'
-import {GlobalStyle, H2, Button, Pill} from './styles'
+import {
+  GlobalStyle,
+  H2,
+  // Button,
+  // Pill,
+} from './styles'
 import BooksContainer from './components/BooksContainer'
 import Header from './components/Header'
 import DetailPanel from './components/DetailPanel'
@@ -11,8 +16,8 @@ const App = () => {
   const [filteredBooks, setFilteredBooks] = useState([])
   const [selectedBook, setSelectedBook] = useState(null)
   const [showPanel, setShowPanel] = useState(false)
-  const [savedBooks, setSavedBooks] = useState([])
-  const [showSavedBooks, setShowSavedBooks] = useState(false)
+  // const [savedBooks, setSavedBooks] = useState([])
+  const [title, setTitle] = useState('All books')
 
   useEffect(() => {
     const fetchData = async () => {
@@ -40,53 +45,41 @@ const App = () => {
 
     if (!searchTerm) {
       setFilteredBooks(books)
+      setTitle('All books')
     } else {
       setFilteredBooks(
         books.filter(
           (book) => stringSearch(book.title, searchTerm) || stringSearch(book.author, searchTerm)
         )
       )
+      setTitle('Search results')
     }
   }
-
-  const hasFiltered = filteredBooks.length !== books.length
 
   return (
     <>
       <GlobalStyle />
       <Header>
-        <Button onClick={() => setShowSavedBooks(false)} $isHeader={true}>
+        {/* reset the filtered books to show all */}
+        {/* <Button onClick={} $isHeader={true}>
           View all books
-        </Button>
-        <Pill>{savedBooks.length}</Pill>
-        <Button onClick={() => setShowSavedBooks(true)} $isHeader={true}>
+        </Button> */}
+        {/* <Pill>{savedBooks.length}</Pill> */}
+        {/* filter out the books that aren't saved */}
+        {/* <Button onClick={} $isHeader={true}>
           Saved books
-        </Button>
+        </Button> */}
         <Search filterBooks={filterBooks} />
       </Header>
-      {showSavedBooks ? (
-        <H2>Saved Books</H2>
-      ) : (
-        <H2>{hasFiltered ? 'Search results' : 'All books'}</H2>
-      )}
+      <H2>{title}</H2>
       <BooksContainer
-        books={showSavedBooks ? savedBooks : filteredBooks}
+        books={filteredBooks}
         pickBook={pickBook}
         isPanelOpen={showPanel}
         allBooksLength={books.length}
-        savedBooks={savedBooks}
-        showSavedBooks={showSavedBooks}
       />
       <Transition in={showPanel} timeout={300}>
-        {(state) => (
-          <DetailPanel
-            book={selectedBook}
-            state={state}
-            closePanel={closePanel}
-            savedBooks={savedBooks}
-            setSavedBooks={setSavedBooks}
-          />
-        )}
+        {(state) => <DetailPanel book={selectedBook} state={state} closePanel={closePanel} />}
       </Transition>
     </>
   )

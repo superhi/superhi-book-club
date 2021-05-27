@@ -7,11 +7,11 @@ const NoBooksMessage = () => (
   <NoBooksContainer>
     <H3>Oh dear!</H3>
     <SadFace />
-    <H4>You haven’t saved any books yet.</H4>
+    <H4>There are no books to see here.</H4>
   </NoBooksContainer>
 )
 
-const BooksContainer = ({books, pickBook, isPanelOpen, savedBooks, showSavedBooks}) => {
+const BooksContainer = ({books, pickBook, isPanelOpen}) => {
   const prevPanelState = useRef(false)
   const [scroll, setScroll] = useState(0)
 
@@ -38,7 +38,7 @@ const BooksContainer = ({books, pickBook, isPanelOpen, savedBooks, showSavedBook
 
   return (
     <Container $isPanelOpen={isPanelOpen} $top={scroll}>
-      {savedBooks.length < 1 && showSavedBooks ? (
+      {books.length === 0 ? (
         <NoBooksMessage />
       ) : (
         <BookList>
