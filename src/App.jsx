@@ -52,15 +52,20 @@ const App = () => {
     }
   }
 
+  const updateBookState = (status) => {
+    setShowSavedBooks(status)
+    closePanel()
+  }
+
   return (
     <>
       <GlobalStyle />
       <Header>
-        <Button $isHeader={true} onClick={() => setShowSavedBooks(false)}>
+        <Button $isHeader={true} onClick={() => updateBookState(false)}>
           View all books
         </Button>
         <Pill>{savedBooks.length}</Pill>
-        <Button $isHeader={true} onClick={() => setShowSavedBooks(true)}>
+        <Button $isHeader={true} onClick={() => updateBookState(true)}>
           Saved books
         </Button>
         <Search filterBooks={filterBooks} />

@@ -2,17 +2,19 @@ import React, {useState} from 'react'
 import {Container, Cover, Title, Author} from './styles'
 import {Button} from '../../styles'
 
-const Book = ({book, pickBook, isLarge, setSavedBooks}) => {
+const Book = ({book, pickBook, isLarge, setSavedBooks, closePanel}) => {
   const [isSaved, setIsSaved] = useState(false)
 
   const handleSave = () => {
     setIsSaved((isSaved) => !isSaved)
 
-    if (isSaved) {
-      setSavedBooks((savedBooks) => [...savedBooks, book])
-    } else {
+    if (!isSaved) {
       setSavedBooks((savedBooks) => savedBooks.filter((thisBook) => thisBook !== book))
+    } else {
+      setSavedBooks((savedBooks) => [...savedBooks, book])
     }
+
+    closePanel()
   }
 
   return (

@@ -23,7 +23,12 @@ const DetailPanel = ({book, closePanel, state, setSavedBooks}) => {
         </CloseWrapper>
         {book && (
           <>
-            <Book book={book} isLarge={true} setSavedBooks={setSavedBooks} />
+            <Book
+              book={book}
+              isLarge={true}
+              setSavedBooks={setSavedBooks}
+              closePanel={closePanel}
+            />
             <P>{book.description}</P>
             <P>
               <Em>Published in {book.published}</Em>
