@@ -1,7 +1,7 @@
 import React, {useRef, useEffect, useState} from 'react'
 import {debounce} from 'lodash-es'
 import Book from '../Book'
-import {Container, BookList, NoBooksContainer, H3, H4, SadFace} from './styles'
+import {Container, BookList, NoBooksContainer, H2, H3, H4, SadFace} from './styles'
 
 const NoBooksMessage = () => (
   <NoBooksContainer>
@@ -11,7 +11,7 @@ const NoBooksMessage = () => (
   </NoBooksContainer>
 )
 
-const BooksContainer = ({books, pickBook, isPanelOpen}) => {
+const BooksContainer = ({books, pickBook, isPanelOpen, title, showSavedBooks}) => {
   const prevPanelState = useRef(false)
   const [scroll, setScroll] = useState(0)
 
@@ -38,6 +38,7 @@ const BooksContainer = ({books, pickBook, isPanelOpen}) => {
 
   return (
     <Container $isPanelOpen={isPanelOpen} $top={scroll}>
+      <H2>{showSavedBooks ? 'Saved books' : title}</H2>
       {books.length === 0 ? (
         <NoBooksMessage />
       ) : (

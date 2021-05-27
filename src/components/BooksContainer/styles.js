@@ -6,7 +6,7 @@ export const Container = styled.div`
   padding: 160px 40px;
   overflow: ${({$isPanelOpen}) => ($isPanelOpen ? 'hidden' : 'scroll')};
   position: ${({$isPanelOpen}) => ($isPanelOpen ? 'fixed' : 'relative')};
-  top: ${({$isPanelOpen, $top}) => ($isPanelOpen ? `-${$top - 10}px` : '0')};
+  top: ${({$isPanelOpen, $top}) => ($isPanelOpen ? `-${$top}px` : '0')};
 
   @media (max-width: 800px) {
     padding: 114px 20px;
@@ -40,6 +40,15 @@ export const NoBooksContainer = styled.div`
   text-align: center;
   width: 100vw;
   height: 50vh;
+`
+
+export const H2 = styled.h2`
+  font-size: 42px;
+  margin: 0;
+
+  @media (max-width: 800px) {
+    font-size: 32px;
+  }
 `
 
 export const H3 = styled.h3`

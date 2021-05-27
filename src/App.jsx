@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import {Transition} from 'react-transition-group'
-import {GlobalStyle, H2, Pill, Button} from './styles'
+import {GlobalStyle, Pill, Button} from './styles'
 import BooksContainer from './components/BooksContainer'
 import Header from './components/Header'
 import DetailPanel from './components/DetailPanel'
@@ -65,12 +65,13 @@ const App = () => {
         </Button>
         <Search filterBooks={filterBooks} />
       </Header>
-      <H2>{showSavedBooks ? 'Saved books' : title}</H2>
       <BooksContainer
         books={showSavedBooks ? savedBooks : filteredBooks}
         pickBook={pickBook}
         isPanelOpen={showPanel}
         allBooksLength={books.length}
+        title={title}
+        showSavedBooks={showSavedBooks}
       />
       <Transition in={showPanel} timeout={300}>
         {(state) => (

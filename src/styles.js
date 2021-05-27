@@ -51,18 +51,6 @@ export const Close = styled.button`
   }
 `
 
-export const H2 = styled.h2`
-  font-size: 42px;
-  margin: 0 40px;
-  position: relative;
-  top: 140px;
-  z-index: 1;
-
-  @media (max-width: 800px) {
-    font-size: 32px;
-  }
-`
-
 export const Button = styled.button`
   display: ${({$isLarge, $isHeader}) => ($isLarge || $isHeader ? 'block' : 'none')};
   border-radius: 30px;
