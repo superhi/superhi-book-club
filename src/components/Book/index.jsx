@@ -23,8 +23,6 @@ const Book = ({book, pickBook, isLarge, setSavedBooks, closePanel}) => {
     closePanel()
   }
 
-  console.log(book, isSaved)
-
   return (
     <Container $isLarge={isLarge} onClick={() => pickBook && pickBook(book)}>
       <Button onClick={handleSave} $isLarge={isLarge}>

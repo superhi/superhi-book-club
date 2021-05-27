@@ -20,19 +20,11 @@ export const Wrapper = styled.div`
 
 export const SearchContainer = styled(Pill)`
   transition: 300ms;
-  width: ${({$showOnDesktop}) => ($showOnDesktop ? '420px' : '20px')};
+  width: ${({$showOnDesktop}) => ($showOnDesktop ? '340px' : '20px')};
 
   input,
   button {
     display: ${({$showOnDesktop}) => ($showOnDesktop ? 'block' : 'none')};
-
-    @media (max-width: 800px) {
-      display: block;
-    }
-  }
-
-  @media (max-width: 800px) {
-    width: 85%;
   }
 `
 
