@@ -29,16 +29,16 @@ export const Close = styled.button`
   border: 0;
   cursor: pointer;
   height: 24px;
+  width: 24px;
   padding: 0;
   position: relative;
-  width: 24px;
 
   &:before,
   &:after {
     background-color: #000;
     content: ' ';
     height: 24px;
-    left: 12px;
+    left: 9px;
     position: absolute;
     top: 0;
     width: 2px;

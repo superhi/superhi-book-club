@@ -8,7 +8,7 @@ export const Container = styled.div`
   position: ${({$isPanelOpen}) => ($isPanelOpen ? 'fixed' : 'relative')};
   top: ${({$isPanelOpen, $top}) => ($isPanelOpen ? `-${$top}px` : '0')};
 
-  @media (max-width: 800px) {
+  @media (max-width: 1000px) {
     padding: 114px 20px;
   }
 `
@@ -38,7 +38,6 @@ export const NoBooksContainer = styled.div`
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  width: 100vw;
   height: 50vh;
 `
 
@@ -46,7 +45,7 @@ export const H2 = styled.h2`
   font-size: 42px;
   margin: 0;
 
-  @media (max-width: 800px) {
+  @media (max-width: 1000px) {
     font-size: 32px;
   }
 `
@@ -54,11 +53,19 @@ export const H2 = styled.h2`
 export const H3 = styled.h3`
   font-size: 34px;
   margin: 0;
+
+  @media (max-width: 1000px) {
+    font-size: 30px;
+  }
 `
 
 export const H4 = styled.h4`
   font-size: 24px;
   margin: 0;
+
+  @media (max-width: 1000px) {
+    font-size: 20px;
+  }
 `
 
 export const SadFace = styled(SadFaceSVG)`

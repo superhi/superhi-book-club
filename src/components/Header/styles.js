@@ -14,7 +14,7 @@ export const HeaderContainer = styled.header`
   justify-content: space-between;
   top: 0;
 
-  @media (max-width: 800px) {
+  @media (max-width: 1000px) {
     padding: 20px;
   }
 `
@@ -24,7 +24,7 @@ export const Logo = styled(LogoAsset)`
   width: 270px;
   display: block;
 
-  @media (max-width: 800px) {
+  @media (max-width: 1000px) {
     height: 33px;
     width: 222px;
   }

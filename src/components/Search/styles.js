@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
   justify-content: center;
   gap: 22px;
 
-  @media (max-width: 800px) {
+  @media (max-width: 1000px) {
     border-top: 2px solid black;
     background: #ffbccc;
     height: 64px;
