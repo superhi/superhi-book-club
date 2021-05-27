@@ -16,7 +16,7 @@ const App = () => {
   const [filteredBooks, setFilteredBooks] = useState([])
   const [selectedBook, setSelectedBook] = useState(null)
   const [showPanel, setShowPanel] = useState(false)
-  // const [savedBooks, setSavedBooks] = useState([])
+  const [savedBooks, setSavedBooks] = useState([])
   const [title, setTitle] = useState('All books')
 
   useEffect(() => {
@@ -56,6 +56,8 @@ const App = () => {
     }
   }
 
+  console.log(savedBooks)
+
   return (
     <>
       <GlobalStyle />
@@ -79,7 +81,14 @@ const App = () => {
         allBooksLength={books.length}
       />
       <Transition in={showPanel} timeout={300}>
-        {(state) => <DetailPanel book={selectedBook} state={state} closePanel={closePanel} />}
+        {(state) => (
+          <DetailPanel
+            book={selectedBook}
+            state={state}
+            closePanel={closePanel}
+            setSavedBooks={setSavedBooks}
+          />
+        )}
       </Transition>
     </>
   )

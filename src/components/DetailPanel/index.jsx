@@ -3,7 +3,7 @@ import Book from '../Book'
 import {CloseWrapper, Panel, BG, P, Em} from './styles'
 import {Close} from '../../styles'
 
-const DetailPanel = ({book, closePanel, state}) => {
+const DetailPanel = ({book, closePanel, state, setSavedBooks}) => {
   const panelEl = useRef(null)
   const prevBook = useRef(null)
 
@@ -23,7 +23,7 @@ const DetailPanel = ({book, closePanel, state}) => {
         </CloseWrapper>
         {book && (
           <>
-            <Book book={book} isLarge={true} />
+            <Book book={book} isLarge={true} setSavedBooks={setSavedBooks} />
             <P>{book.description}</P>
             <P>
               <Em>Published in {book.published}</Em>
