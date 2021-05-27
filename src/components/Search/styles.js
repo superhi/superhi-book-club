@@ -44,3 +44,8 @@ export const Icon = styled(MagnifyingIcon)`
   width: 20px;
   cursor: pointer;
 `
+
+export const Nav = styled.nav`
+  display: ${({$isHidden}) => ($isHidden ? 'none' : 'flex')};
+  gap: 22px;
+`

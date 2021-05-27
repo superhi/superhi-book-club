@@ -1,5 +1,5 @@
 import React, {useState, useRef} from 'react'
-import {Input, SearchContainer, Icon, Wrapper} from './styles'
+import {Input, SearchContainer, Icon, Wrapper, Nav} from './styles'
 import {Close, Button, Pill} from '../../styles'
 
 const Search = ({filterBooks, updateBookState, savedBooks}) => {
@@ -22,13 +22,15 @@ const Search = ({filterBooks, updateBookState, savedBooks}) => {
 
   return (
     <Wrapper>
-      <Button $isHeader={true} onClick={() => updateBookState(false)}>
-        View all books
-      </Button>
-      <Pill>{savedBooks.length}</Pill>
-      <Button $isHeader={true} onClick={() => updateBookState(true)}>
-        Saved books
-      </Button>
+      <Nav $isHidden={showOnDesktop}>
+        <Button $isHeader={true} onClick={() => updateBookState(false)}>
+          View all
+        </Button>
+        <Pill>{savedBooks.length}</Pill>
+        <Button $isHeader={true} onClick={() => updateBookState(true)}>
+          Saved books
+        </Button>
+      </Nav>
       <SearchContainer $showOnDesktop={showOnDesktop}>
         <Icon onClick={showSearch} />
         <Input ref={inputEl} type="text" name="search" onChange={handleChange} autoComplete="off" />
