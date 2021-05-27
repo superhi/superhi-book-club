@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import {ReactComponent as StarSVG} from '../../assets/star.svg'
 
 export const Container = styled.figure`
   cursor: ${({$isLarge}) => ($isLarge ? 'auto' : 'pointer')};
@@ -30,4 +31,8 @@ export const Author = styled.h4`
   font-size: 16px;
   line-height: 1.6;
   margin: 0;
+`
+
+export const Star = styled(StarSVG)`
+  display: block;
 `

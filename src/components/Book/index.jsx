@@ -1,5 +1,11 @@
 import React, {useState} from 'react'
-import {Container, Cover, Title, Author} from './styles'
+import {
+  Container,
+  Cover,
+  Title,
+  Author,
+  // Star
+} from './styles'
 import {Button} from '../../styles'
 
 const Book = ({book, pickBook, isLarge, setSavedBooks, closePanel}) => {
@@ -17,11 +23,14 @@ const Book = ({book, pickBook, isLarge, setSavedBooks, closePanel}) => {
     closePanel()
   }
 
+  console.log(book, isSaved)
+
   return (
     <Container $isLarge={isLarge} onClick={() => pickBook && pickBook(book)}>
       <Button onClick={handleSave} $isLarge={isLarge}>
         {isSaved ? 'Saved!' : 'Save for later'}
       </Button>
+      {/* {isSaved && <Star />} */}
       <Cover src={book.image} alt={`Book cover for ${book.title} by ${book.author}`} />
       <figcaption>
         <Title $isLarge={isLarge}>{book.title}</Title>
