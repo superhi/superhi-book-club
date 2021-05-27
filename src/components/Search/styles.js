@@ -3,11 +3,13 @@ import {ReactComponent as MagnifyingIcon} from '../../assets/search.svg'
 import {Pill} from '../../styles'
 
 export const Wrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+
   @media (max-width: 800px) {
     border-top: 2px solid black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background: #ffbccc;
     height: 64px;
     width: 100vw;

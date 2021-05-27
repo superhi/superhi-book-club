@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import {Transition} from 'react-transition-group'
-import {GlobalStyle, Pill, Button} from './styles'
+import {GlobalStyle} from './styles'
 import BooksContainer from './components/BooksContainer'
 import Header from './components/Header'
 import DetailPanel from './components/DetailPanel'
@@ -61,14 +61,11 @@ const App = () => {
     <>
       <GlobalStyle />
       <Header>
-        <Button $isHeader={true} onClick={() => updateBookState(false)}>
-          View all books
-        </Button>
-        <Pill>{savedBooks.length}</Pill>
-        <Button $isHeader={true} onClick={() => updateBookState(true)}>
-          Saved books
-        </Button>
-        <Search filterBooks={filterBooks} />
+        <Search
+          filterBooks={filterBooks}
+          updateBookState={updateBookState}
+          savedBooks={savedBooks}
+        />
       </Header>
       <BooksContainer
         books={showSavedBooks ? savedBooks : filteredBooks}
