@@ -8,14 +8,12 @@ const Book = ({book, pickBook, isLarge, setSavedBooks}) => {
   const handleSave = () => {
     setIsSaved((isSaved) => !isSaved)
 
-    // if (isSaved) {
-    //   setSavedBooks((savedBooks) => [...savedBooks, book])
-    // } else {
-    //   setSavedBooks((savedBooks) => savedBooks.filter((thisBook) => thisBook !== book))
-    // }
+    if (isSaved) {
+      setSavedBooks((savedBooks) => [...savedBooks, book])
+    } else {
+      setSavedBooks((savedBooks) => savedBooks.filter((thisBook) => thisBook !== book))
+    }
   }
-
-  console.log(setSavedBooks)
 
   return (
     <Container $isLarge={isLarge} onClick={() => pickBook && pickBook(book)}>

@@ -64,7 +64,7 @@ export const H2 = styled.h2`
 `
 
 export const Button = styled.button`
-  display: ${({$isLarge}) => ($isLarge ? 'block' : 'none')};
+  display: ${({$isLarge, $isHeader}) => ($isLarge || $isHeader ? 'block' : 'none')};
   border-radius: 30px;
   padding: 10px 16px;
   border: 2px solid #000;

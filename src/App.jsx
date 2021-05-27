@@ -1,11 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import {Transition} from 'react-transition-group'
-import {
-  GlobalStyle,
-  H2,
-  // Button,
-  // Pill,
-} from './styles'
+import {GlobalStyle, H2, Pill, Button} from './styles'
 import BooksContainer from './components/BooksContainer'
 import Header from './components/Header'
 import DetailPanel from './components/DetailPanel'
@@ -17,6 +12,7 @@ const App = () => {
   const [selectedBook, setSelectedBook] = useState(null)
   const [showPanel, setShowPanel] = useState(false)
   const [savedBooks, setSavedBooks] = useState([])
+  const [showSavedBooks, setShowSavedBooks] = useState(false)
   const [title, setTitle] = useState('All books')
 
   useEffect(() => {
@@ -56,26 +52,22 @@ const App = () => {
     }
   }
 
-  console.log(savedBooks)
-
   return (
     <>
       <GlobalStyle />
       <Header>
-        {/* reset the filtered books to show all */}
-        {/* <Button onClick={} $isHeader={true}>
+        <Button $isHeader={true} onClick={() => setShowSavedBooks(false)}>
           View all books
-        </Button> */}
-        {/* <Pill>{savedBooks.length}</Pill> */}
-        {/* filter out the books that aren't saved */}
-        {/* <Button onClick={} $isHeader={true}>
+        </Button>
+        <Pill>{savedBooks.length}</Pill>
+        <Button $isHeader={true} onClick={() => setShowSavedBooks(true)}>
           Saved books
-        </Button> */}
+        </Button>
         <Search filterBooks={filterBooks} />
       </Header>
-      <H2>{title}</H2>
+      <H2>{showSavedBooks ? 'Saved books' : title}</H2>
       <BooksContainer
-        books={filteredBooks}
+        books={showSavedBooks ? savedBooks : filteredBooks}
         pickBook={pickBook}
         isPanelOpen={showPanel}
         allBooksLength={books.length}
