@@ -32,9 +32,9 @@ const BooksContainer = ({books, pickBook, title, isPanelOpen}) => {
     <Container $isPanelOpen={isPanelOpen} $top={scroll}>
       <H2>{title}</H2>
       <BookList>
-        {books.map((book) => (
-          <Book key={book.id} book={book} pickBook={pickBook} />
-        ))}
+        {books.length
+          ? books.map((book) => <Book key={book.id} book={book} pickBook={pickBook} />)
+          : 'No books :('}
       </BookList>
     </Container>
   )
