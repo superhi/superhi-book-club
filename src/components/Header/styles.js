@@ -28,3 +28,10 @@ export const Logo = styled(LogoAsset)`
     width: 222px;
   }
 `
+
+export const Right = styled.div`
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+`

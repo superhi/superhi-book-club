@@ -50,3 +50,19 @@ export const Close = styled.button`
     transform: rotate(-45deg);
   }
 `
+
+export const Button = styled.button`
+  display: ${({$isHeader}) => ($isHeader ? 'block' : 'none')};
+  border-radius: 30px;
+  padding: 10px 16px;
+  border: 2px solid #000;
+  background: transparent;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 18px;
+  margin-bottom: ${({$isHeader}) => ($isHeader ? '0' : '14px')};
+  cursor: pointer;
+  @media (max-width: 1000px) {
+    font-size: 14px;
+    padding: 10px;
+  }
+`

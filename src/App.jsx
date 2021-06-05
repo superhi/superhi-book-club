@@ -18,6 +18,7 @@ const App = () => {
       // get the favourite ids from local storage, default to an empty array to prevent errors
       // from trying to parse `undefined` on first load
       const faveBookIds = JSON.parse(localStorage.getItem('faveBookIds') || '[]')
+
       // map over the books and set which ones have been favourited
       // note that we don't need to use the object spread form here as it's fine to mutate the
       // `book` itself, unlike when using it in react state, but lets keep things neat.
