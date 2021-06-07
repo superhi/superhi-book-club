@@ -52,7 +52,7 @@ export const Close = styled.button`
 `
 
 export const Button = styled.button`
-  display: ${({$isHeader}) => ($isHeader ? 'block' : 'none')};
+  display: block;
   border-radius: 30px;
   padding: 10px 16px;
   border: 2px solid #000;

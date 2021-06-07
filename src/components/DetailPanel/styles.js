@@ -18,7 +18,7 @@ export const Panel = styled.article`
   background-color: #ffe581;
   border-left: 2px solid #000;
   box-sizing: border-box;
-  height: calc(100vh - 82px);
+  height: calc(100vh - 87px);
   width: 660px;
   position: fixed;
   z-index: 2;
@@ -32,7 +32,6 @@ export const Panel = styled.article`
   @media (max-width: 800px) {
     border-left: none;
     width: 100vw;
-    height: calc(100vh - 75px);
     padding: 40px 86px 20px 20px;
     bottom: ${({$state}) => ($state === 'entering' || $state === 'entered' ? 0 : '-100vh')};
     right: unset;

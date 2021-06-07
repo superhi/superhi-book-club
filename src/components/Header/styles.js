@@ -25,7 +25,7 @@ export const Logo = styled(LogoAsset)`
 
   @media (max-width: 800px) {
     height: 33px;
-    width: 222px;
+    width: 200px;
   }
 `
 

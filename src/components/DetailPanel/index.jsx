@@ -1,7 +1,7 @@
 import React, {useRef, useEffect} from 'react'
 import Book from '../Book'
 import {CloseWrapper, Panel, BG, P, Em} from './styles'
-import {Close} from '../../styles'
+import {Close, Button} from '../../styles'
 
 const DetailPanel = ({book, closePanel, state, toggleFave}) => {
   const panelEl = useRef(null)
@@ -23,9 +23,9 @@ const DetailPanel = ({book, closePanel, state, toggleFave}) => {
         </CloseWrapper>
         {book && (
           <>
-            <button onClick={() => toggleFave(book.id)}>
+            <Button onClick={() => toggleFave(book.id)}>
               {book.isFaved ? 'Unfave book' : 'Fave book'}
-            </button>
+            </Button>
             <Book book={book} isLarge={true} />
             <P>{book.description}</P>
             <P>
