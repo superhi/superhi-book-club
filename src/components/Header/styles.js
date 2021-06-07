@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import {ReactComponent as LogoAsset} from '../../assets/logo.svg'
+import {Pill} from '../../styles'
 
 export const HeaderContainer = styled.header`
   background: #ffbccc;
@@ -34,4 +35,15 @@ export const Right = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 20px;
+`
+
+export const FaveButtonContainer = styled.div`
+  display: flex;
+`
+
+export const Counter = styled(Pill)`
+  position: relative;
+  right: -150px;
+  bottom: 10px;
+  padding: 4px;
 `

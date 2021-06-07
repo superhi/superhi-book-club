@@ -10,14 +10,14 @@ const App = () => {
   const [books, setBooks] = useState([])
   const [showPanel, setShowPanel] = useState(false)
   const [showFaves, setShowFaves] = useState(false)
+  // get the favourite ids from local storage, default to an empty array to prevent errors
+  // from trying to parse `undefined` on first load
+  const faveBookIds = JSON.parse(localStorage.getItem('faveBookIds') || '[]')
 
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch('https://book-club-json.herokuapp.com/books')
       const books = await response.json()
-      // get the favourite ids from local storage, default to an empty array to prevent errors
-      // from trying to parse `undefined` on first load
-      const faveBookIds = JSON.parse(localStorage.getItem('faveBookIds') || '[]')
 
       // map over the books and set which ones have been favourited
       // note that we don't need to use the object spread form here as it's fine to mutate the
@@ -99,7 +99,11 @@ const App = () => {
   return (
     <>
       <GlobalStyle />
-      <Header toggleShowFaves={toggleShowFaves} showFaves={showFaves}>
+      <Header
+        toggleShowFaves={toggleShowFaves}
+        showFaves={showFaves}
+        faveBooksLength={faveBookIds.length}
+      >
         <Search filterBooks={filterBooks} />
       </Header>
       <BooksContainer
