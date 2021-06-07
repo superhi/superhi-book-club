@@ -24,7 +24,7 @@ const DetailPanel = ({book, closePanel, state, toggleFave}) => {
         {book && (
           <>
             <Button onClick={() => toggleFave(book.id)}>
-              {book.isFaved ? 'Unfave book' : 'Fave book'}
+              {book.isFaved ? '💔 Unfave book' : '❤️ Fave book'}
             </Button>
             <Book book={book} isLarge={true} />
             <P>{book.description}</P>
