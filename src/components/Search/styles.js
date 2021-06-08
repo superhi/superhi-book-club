@@ -72,5 +72,6 @@ export const Counter = styled(Pill)`
 
   @media (max-width: 1000px) {
     right: -120px;
+    padding: 2px;
   }
 `
