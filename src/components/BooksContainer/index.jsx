@@ -39,13 +39,15 @@ const BooksContainer = ({books, pickBook, title, isPanelOpen}) => {
   return (
     <Container $isPanelOpen={isPanelOpen} $top={scroll}>
       <H2>{title}</H2>
-      <BookList>
-        {books.length ? (
-          books.map((book) => <Book key={book.id} book={book} pickBook={pickBook} />)
-        ) : (
-          <NoBooksMessage />
-        )}
-      </BookList>
+      {books.length > 0 ? (
+        <BookList>
+          {books.map((book) => (
+            <Book key={book.id} book={book} pickBook={pickBook} />
+          ))}
+        </BookList>
+      ) : (
+        <NoBooksMessage />
+      )}
     </Container>
   )
 }
