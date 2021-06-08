@@ -29,7 +29,7 @@ export const Close = styled.button`
   border: 0;
   cursor: pointer;
   height: 24px;
-  padding: 0;
+  padding: 0 12px;
   position: relative;
   width: 24px;
 
@@ -63,7 +63,7 @@ export const Button = styled.button`
   cursor: pointer;
   width: ${({$isHeader}) => ($isHeader ? '140px' : 'unset')};
 
-  @media (max-width: 700px) {
+  @media (max-width: 1000px) {
     font-size: 14px;
     padding: 8px;
     width: ${({$isHeader}) => ($isHeader ? '110px' : 'unset')};

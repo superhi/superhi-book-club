@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   display: flex;
   gap: 20px;
 
-  @media (max-width: 800px) {
+  @media (max-width: 1000px) {
     border-top: 2px solid black;
     align-items: center;
     justify-content: center;
@@ -17,6 +17,7 @@ export const Wrapper = styled.div`
     bottom: 0;
     position: fixed;
     z-index: 1;
+    gap: unset;
   }
 `
 
@@ -28,13 +29,13 @@ export const SearchContainer = styled(Pill)`
   button {
     display: ${({$showOnDesktop}) => ($showOnDesktop ? 'block' : 'none')};
 
-    @media (max-width: 800px) {
+    @media (max-width: 1000px) {
       display: block;
     }
   }
 
-  @media (max-width: 800px) {
-    width: 85%;
+  @media (max-width: 1000px) {
+    width: 60%;
   }
 `
 
@@ -46,15 +47,21 @@ export const Input = styled.input`
   background: inherit;
   border: none;
   padding: 6px;
+  width: 100%;
 `
 
 export const Icon = styled(MagnifyingIcon)`
-  width: 20px;
+  width: 30px;
   cursor: pointer;
 `
 
 export const FaveButtonContainer = styled.div`
   display: flex;
+
+  @media (max-width: 1000px) {
+    position: relative;
+    left: -15px;
+  }
 `
 
 export const Counter = styled(Pill)`
@@ -63,7 +70,7 @@ export const Counter = styled(Pill)`
   bottom: 10px;
   padding: 4px;
 
-  @media (max-width: 700px) {
+  @media (max-width: 1000px) {
     right: -120px;
   }
 `
