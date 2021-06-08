@@ -29,7 +29,8 @@ export const Panel = styled.article`
   transition: 300ms;
   right: ${({$state}) => ($state === 'entering' || $state === 'entered' ? 0 : '-660px')};
 
-  @media (max-width: 800px) {
+  @media (max-width: 1000px) {
+    height: calc(100vh - 75px);
     border-left: none;
     width: 100vw;
     padding: 40px 86px 20px 20px;
@@ -50,7 +51,7 @@ export const CloseWrapper = styled(Pill)`
     margin-left: -3px;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 1000px) {
     top: unset;
     bottom: 20px;
     right: 20px;

@@ -23,7 +23,7 @@ export const Logo = styled(LogoAsset)`
   width: 270px;
   display: block;
 
-  @media (max-width: 800px) {
+  @media (max-width: 1000px) {
     height: 33px;
     width: 200px;
   }
