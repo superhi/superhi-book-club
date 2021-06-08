@@ -99,12 +99,13 @@ const App = () => {
   return (
     <>
       <GlobalStyle />
-      <Header
-        toggleShowFaves={toggleShowFaves}
-        showFaves={showFaves}
-        faveBooksLength={faveBookIds.length}
-      >
-        <Search filterBooks={filterBooks} />
+      <Header>
+        <Search
+          filterBooks={filterBooks}
+          toggleShowFaves={toggleShowFaves}
+          showFaves={showFaves}
+          faveBooksLength={faveBookIds.length}
+        />
       </Header>
       <BooksContainer
         books={displayBooks}

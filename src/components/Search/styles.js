@@ -3,9 +3,11 @@ import {ReactComponent as MagnifyingIcon} from '../../assets/search.svg'
 import {Pill} from '../../styles'
 
 export const Wrapper = styled.div`
+  display: flex;
+  gap: 20px;
+
   @media (max-width: 800px) {
     border-top: 2px solid black;
-    display: flex;
     align-items: center;
     justify-content: center;
     background: #ffbccc;
@@ -49,4 +51,19 @@ export const Input = styled.input`
 export const Icon = styled(MagnifyingIcon)`
   width: 20px;
   cursor: pointer;
+`
+
+export const FaveButtonContainer = styled.div`
+  display: flex;
+`
+
+export const Counter = styled(Pill)`
+  position: relative;
+  right: -150px;
+  bottom: 10px;
+  padding: 4px;
+
+  @media (max-width: 700px) {
+    right: -120px;
+  }
 `

@@ -61,8 +61,11 @@ export const Button = styled.button`
   font-size: 18px;
   margin-bottom: ${({$isHeader}) => ($isHeader ? '0' : '14px')};
   cursor: pointer;
-  @media (max-width: 1000px) {
+  width: ${({$isHeader}) => ($isHeader ? '140px' : 'unset')};
+
+  @media (max-width: 700px) {
     font-size: 14px;
-    padding: 10px;
+    padding: 8px;
+    width: ${({$isHeader}) => ($isHeader ? '110px' : 'unset')};
   }
 `
