@@ -35,7 +35,8 @@ export const SearchContainer = styled(Pill)`
   }
 
   @media (max-width: 1000px) {
-    width: 60%;
+    width: 50%;
+    margin-right: 10px;
   }
 `
 
