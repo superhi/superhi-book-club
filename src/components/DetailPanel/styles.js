@@ -18,7 +18,7 @@ export const Panel = styled.article`
   background-color: #ffe581;
   border-left: 2px solid #000;
   box-sizing: border-box;
-  height: calc(100vh - 87px);
+  height: calc(100vh - 83px);
   width: 660px;
   position: fixed;
   z-index: 2;

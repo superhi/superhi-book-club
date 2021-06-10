@@ -54,7 +54,7 @@ export const Close = styled.button`
 export const Button = styled.button`
   display: block;
   border-radius: 30px;
-  padding: ${({$hasEmoji}) => ($hasEmoji ? '6px 16px' : '10px')};
+  padding: ${({$hasEmoji}) => ($hasEmoji ? '5px 14px' : '8px')};
   border: 2px solid #000;
   background: transparent;
   font-family: 'Work Sans', sans-serif;
