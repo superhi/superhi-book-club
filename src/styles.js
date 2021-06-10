@@ -54,18 +54,17 @@ export const Close = styled.button`
 export const Button = styled.button`
   display: block;
   border-radius: 30px;
-  padding: 10px 16px;
+  padding: ${({$hasEmoji}) => ($hasEmoji ? '6px 16px' : '10px')};
   border: 2px solid #000;
   background: transparent;
   font-family: 'Work Sans', sans-serif;
   font-size: 18px;
   margin-bottom: ${({$isHeader}) => ($isHeader ? '0' : '14px')};
   cursor: pointer;
-  width: ${({$isHeader}) => ($isHeader ? '140px' : '180px')};
+  width: ${({$isHeader}) => ($isHeader ? '140px' : 'unset')};
 
   @media (max-width: 1000px) {
     font-size: 14px;
-    padding: 8px;
-    width: ${({$isHeader}) => ($isHeader ? '110px' : '140px')};
+    width: ${({$isHeader}) => ($isHeader ? '110px' : 'unset')};
   }
 `

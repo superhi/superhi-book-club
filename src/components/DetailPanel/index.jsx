@@ -23,7 +23,7 @@ const DetailPanel = ({book, closePanel, state, toggleFave}) => {
         </CloseWrapper>
         {book && (
           <>
-            <Button onClick={() => toggleFave(book.id)}>
+            <Button onClick={() => toggleFave(book.id)} $hasEmoji={true}>
               {book.isFaved ? '💔 Unfave book' : '❤️ Fave book'}
             </Button>
             <Book book={book} isLarge={true} />

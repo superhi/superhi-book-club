@@ -42,7 +42,7 @@ export const Panel = styled.article`
 export const CloseWrapper = styled(Pill)`
   position: fixed;
   cursor: pointer;
-  top: 120px;
+  top: 130px;
   right: 40px;
   z-index: 4;
   display: ${({$state}) => ($state === 'entered' ? 'flex' : 'none')};
