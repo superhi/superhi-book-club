@@ -18,7 +18,7 @@ export const Panel = styled.article`
   background-color: #ffe581;
   border-left: 2px solid #000;
   box-sizing: border-box;
-  height: calc(100vh - 82px);
+  height: calc(100vh - 83px);
   width: 660px;
   position: fixed;
   z-index: 2;
@@ -29,10 +29,10 @@ export const Panel = styled.article`
   transition: 300ms;
   right: ${({$state}) => ($state === 'entering' || $state === 'entered' ? 0 : '-660px')};
 
-  @media (max-width: 800px) {
+  @media (max-width: 1000px) {
+    height: calc(100vh - 75px);
     border-left: none;
     width: 100vw;
-    height: calc(100vh - 75px);
     padding: 40px 86px 20px 20px;
     bottom: ${({$state}) => ($state === 'entering' || $state === 'entered' ? 0 : '-100vh')};
     right: unset;
@@ -42,7 +42,7 @@ export const Panel = styled.article`
 export const CloseWrapper = styled(Pill)`
   position: fixed;
   cursor: pointer;
-  top: 120px;
+  top: 130px;
   right: 40px;
   z-index: 4;
   display: ${({$state}) => ($state === 'entered' ? 'flex' : 'none')};
@@ -51,7 +51,7 @@ export const CloseWrapper = styled(Pill)`
     margin-left: -3px;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 1000px) {
     top: unset;
     bottom: 20px;
     right: 20px;

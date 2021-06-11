@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import {ReactComponent as SadFaceSVG} from '../../assets/sad-face.svg'
 
 export const Container = styled.div`
   background-color: #a7e1f8;
@@ -38,4 +39,33 @@ export const BookList = styled.div`
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 20px;
   }
+`
+
+export const NoBooksContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 50vh;
+`
+
+export const H3 = styled.h3`
+  font-size: 34px;
+  margin: 0;
+  @media (max-width: 1000px) {
+    font-size: 30px;
+  }
+`
+
+export const H4 = styled.h4`
+  font-size: 24px;
+  margin: 0;
+  @media (max-width: 1000px) {
+    font-size: 20px;
+  }
+`
+
+export const SadFace = styled(SadFaceSVG)`
+  margin: 20px 0;
 `

@@ -3,9 +3,11 @@ import {ReactComponent as MagnifyingIcon} from '../../assets/search.svg'
 import {Pill} from '../../styles'
 
 export const Wrapper = styled.div`
-  @media (max-width: 800px) {
+  display: flex;
+  gap: 20px;
+
+  @media (max-width: 1000px) {
     border-top: 2px solid black;
-    display: flex;
     align-items: center;
     justify-content: center;
     background: #ffbccc;
@@ -15,6 +17,7 @@ export const Wrapper = styled.div`
     bottom: 0;
     position: fixed;
     z-index: 1;
+    gap: unset;
   }
 `
 
@@ -26,13 +29,14 @@ export const SearchContainer = styled(Pill)`
   button {
     display: ${({$showOnDesktop}) => ($showOnDesktop ? 'block' : 'none')};
 
-    @media (max-width: 800px) {
+    @media (max-width: 1000px) {
       display: block;
     }
   }
 
-  @media (max-width: 800px) {
-    width: 85%;
+  @media (max-width: 1000px) {
+    width: 50%;
+    margin-right: 10px;
   }
 `
 
@@ -44,9 +48,31 @@ export const Input = styled.input`
   background: inherit;
   border: none;
   padding: 6px;
+  width: 100%;
 `
 
 export const Icon = styled(MagnifyingIcon)`
-  width: 20px;
+  width: 30px;
   cursor: pointer;
+`
+
+export const FaveButtonContainer = styled.div`
+  display: flex;
+
+  @media (max-width: 1000px) {
+    position: relative;
+    left: -15px;
+  }
+`
+
+export const Counter = styled(Pill)`
+  position: relative;
+  right: -150px;
+  bottom: 10px;
+  padding: 4px;
+
+  @media (max-width: 1000px) {
+    right: -120px;
+    padding: 2px;
+  }
 `
