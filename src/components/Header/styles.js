@@ -29,7 +29,7 @@ export const Logo = styled(LogoAsset)`
   }
 `
 
-export const Right = styled.div`
+export const RightContainer = styled.div`
   right: 0;
   display: flex;
   justify-content: space-between;
